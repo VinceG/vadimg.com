@@ -1,0 +1,2191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Vincent Gabriel</title>
+  <subtitle>Software Engineering</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://vadimg.com/"/>
+  <updated>2017-06-12T01:21:28.000Z</updated>
+  <id>http://vadimg.com/</id>
+  
+  <author>
+    <name>Vincent Gabriel</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Realtor.com PHP library to Search and View</title>
+    <link href="http://vadimg.com/2014/09/Realtor.com%20PHP%20library%20to%20Search%20and%20View/"/>
+    <id>http://vadimg.com/2014/09/Realtor.com PHP library to Search and View/</id>
+    <published>2014-09-19T04:03:11.000Z</published>
+    <updated>2017-06-12T01:21:28.000Z</updated>
+    
+    <content type="html"><![CDATA[<article class="markdown-body entry-content">
+  <br>
+  <h1>
+    <a class="anchor" href="#realtorcom-search" name="user-content-realtorcom-search"></a>Realtor.com Search</h1>
+  <br>
+  <a href="https://github.com/VinceG/realtor.com" target="_blank">View On Github</a>
+  <br>
+  <br>This is a simple PHP Wrapper for searching Realtor.com and viewing listing information.
+  Please read the realtor.com Terms Of Use before using this library.
+  <br>
+  <h2>
+    <a class="anchor" href="#requirements" name="user-content-requirements"></a>Requirements</h2>
+  <br>depends on PHP 5.4+, Goutte 2.0+, Guzzle 4+.
+  <br>
+  <h2>
+    <a class="anchor" href="#installation" name="user-content-installation"></a>Installation</h2>
+  <br>Add vince/realtor.com` as a require dependency in your
+  <tt>composer.json</tt> file:
+  <br>
+  <pre>php composer.phar require vince/realtor.com:~1.0<br></pre>
+  <br>
+  <h2>
+    <a class="anchor" href="#usage" name="user-content-usage"></a>Usage</h2>
+  <br>
+  <pre>use Realtor\RealtorClient;<br><br>$client = new RealtorClient();<br></pre>
+  <br>Make requests with a specific API call method:
+  <br>
+  <div class="highlight highlight-php">
+    <br>
+    <pre>// Run search by address<br>$response = $client-&gt;searchByAddress(‘5400 Tujunga Ave’);<br>// Run search by address<br>$response = $client-&gt;getListingsByZip(90021, $perPage[10,20,50], $currentPage=1);<br>// Run search by address<br>$response = $client-&gt;getListingsByCityAndState(‘Los Angeles’, ‘CA’, $perPage[10,20,50], $currentPage=1);<br>// Run search by address<br>$response = $client-&gt;getInformation(‘LISTING FULL URL’);<br></pre>
+    <br>
+  </div>
+  <br>
+  <ul>
+    <br>
+    <li>See example directory for example usage. The result will always be an array.
+      refer to the RESULT file to see an example result.</li>
+    <br>
+  </ul>
+  <br>
+  <h2>
+    <a class="anchor" href="#license" name="user-content-license"></a>License</h2>
+  <br>MIT license.
+  <br>
+  <br>
+</article>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;article class=&quot;markdown-body entry-content&quot;&gt;
+  &lt;br&gt;
+  &lt;h1&gt;
+    &lt;a class=&quot;anchor&quot; href=&quot;#realtorcom-search&quot; name=&quot;user-content-realtorcom-se
+    
+    </summary>
+    
+      <category term="PHP" scheme="http://vadimg.com/categories/PHP/"/>
+    
+      <category term="PHP 5.5" scheme="http://vadimg.com/categories/PHP/PHP-5-5/"/>
+    
+    
+      <category term="PHP" scheme="http://vadimg.com/tags/PHP/"/>
+    
+      <category term="library" scheme="http://vadimg.com/tags/library/"/>
+    
+      <category term="listings" scheme="http://vadimg.com/tags/listings/"/>
+    
+      <category term="mls" scheme="http://vadimg.com/tags/mls/"/>
+    
+      <category term="realtor" scheme="http://vadimg.com/tags/realtor/"/>
+    
+      <category term="realtor.com" scheme="http://vadimg.com/tags/realtor-com/"/>
+    
+      <category term="search" scheme="http://vadimg.com/tags/search/"/>
+    
+      <category term="view" scheme="http://vadimg.com/tags/view/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Zillow API PHP</title>
+    <link href="http://vadimg.com/2014/09/Zillow%20API%20PHP/"/>
+    <id>http://vadimg.com/2014/09/Zillow API PHP/</id>
+    <published>2014-09-17T06:43:34.000Z</published>
+    <updated>2017-06-12T01:21:28.000Z</updated>
+    
+    <content type="html"><![CDATA[<div id="readme" class="blob instapaper_body">
+  <article class="markdown-body entry-content">
+    <br>
+    <h1>
+      <a class="anchor" href="#zillow-php-wrapper" name="user-content-zillow-php-wrapper"></a>Zillow, PHP Wrapper</h1>
+    <br>This is a simple PHP Wrapper for the Zillow API services.
+    <br>
+    <br>
+    <a href="https://github.com/VinceG/zillow" target="_blank">Visit Github</a>
+    <br>
+    <br>
+    <a href="https://travis-ci.org/VinceG/zillow" target="_blank" rel="external">
+      <img style="max-width: 100%;" src="https://camo.githubusercontent.com/bf0d5b82529cd4e3f8c99edbf2c0f3dfc75837dd/68747470733a2f2f7472617669732d63692e6f72672f56696e6365472f7a696c6c6f772e7376673f6272616e63683d6d6173746572" alt="https://travis-ci.org/VinceG/zillow.svg?branch=master" data-canonical-src="https://travis-ci.org/VinceG/zillow.svg?branch=master">
+    </a>
+    <br>
+    <h2>
+      <a class="anchor" href="#requirements" name="user-content-requirements"></a>Requirements</h2>
+    <br>depends on PHP 5.4+, Goutte 2.0+, Guzzle 4+.
+    <br>
+    <h2>
+      <a class="anchor" href="#installation" name="user-content-installation"></a>Installation</h2>
+    <br>Add VinceG/zillow` as a require dependency in your
+    <tt>composer.json</tt> file:
+    <br>
+    <pre>php composer.phar require vinceg/zillow:~1.0<br></pre>
+    <br>
+    <h2>
+      <a class="anchor" href="#usage" name="user-content-usage"></a>Usage</h2>
+    <br>
+    <pre>use Zillow\ZillowClient;<br><br>$client = new ZillowClient(‘ZWSID’);<br></pre>
+    <br>Make requests with a specific API call method:
+    <br>
+    <pre>// Run GetSearchResults<br>$response = $client-&gt;GetSearchResults([‘address’ =&gt; ‘5400 Tujunga Ave’, ‘citystatezip’ =&gt; ‘North Hollywood, CA 91601’]);<br></pre>
+    <br>Any Zillow API call will work. Valid callbacks are:
+    <br>
+    <ul>
+      <br>
+      <li>GetZestimate</li>
+      <br>
+      <li>GetSearchResults</li>
+      <br>
+      <li>GetChart</li>
+      <br>
+      <li>GetComps</li>
+      <br>
+      <li>GetDeepComps</li>
+      <br>
+      <li>GetDeepSearchResults</li>
+      <br>
+      <li>GetUpdatedPropertyDetails</li>
+      <br>
+      <li>GetDemographics</li>
+      <br>
+      <li>GetRegionChildren</li>
+      <br>
+      <li>GetRegionChart</li>
+      <br>
+      <li>GetRateSummary</li>
+      <br>
+      <li>GetMonthlyPayments</li>
+      <br>
+      <li>CalculateMonthlyPaymentsAdvanced</li>
+      <br>
+      <li>CalculateAffordability</li>
+      <br>
+      <li>CalculateRefinance</li>
+      <br>
+      <li>CalculateAdjustableMortgage</li>
+      <br>
+      <li>CalculateMortgageTerms</li>
+      <br>
+      <li>CalculateDiscountPoints</li>
+      <br>
+      <li>CalculateBiWeeklyPayment</li>
+      <br>
+      <li>CalculateNoCostVsTraditional</li>
+      <br>
+      <li>CalculateTaxSavings</li>
+      <br>
+      <li>CalculateFixedVsAdjustableRate</li>
+      <br>
+      <li>CalculateInterstOnlyVsTraditional</li>
+      <br>
+      <li>CalculateHELOC</li>
+      <br>
+    </ul>
+    <br>
+    <h2>
+      <a class="anchor" href="#license" name="user-content-license"></a>License</h2>
+    <br>MIT license.
+    <br>
+    <br>
+  </article>
+</div>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;div id=&quot;readme&quot; class=&quot;blob instapaper_body&quot;&gt;
+  &lt;article class=&quot;markdown-body entry-content&quot;&gt;
+    &lt;br&gt;
+    &lt;h1&gt;
+      &lt;a class=&quot;anchor&quot; hre
+    
+    </summary>
+    
+      <category term="PHP" scheme="http://vadimg.com/categories/PHP/"/>
+    
+      <category term="PHP 5.5" scheme="http://vadimg.com/categories/PHP/PHP-5-5/"/>
+    
+    
+      <category term="class" scheme="http://vadimg.com/tags/class/"/>
+    
+      <category term="PHP" scheme="http://vadimg.com/tags/PHP/"/>
+    
+      <category term="library" scheme="http://vadimg.com/tags/library/"/>
+    
+      <category term="php zillow" scheme="http://vadimg.com/tags/php-zillow/"/>
+    
+      <category term="wrapper" scheme="http://vadimg.com/tags/wrapper/"/>
+    
+      <category term="zillow" scheme="http://vadimg.com/tags/zillow/"/>
+    
+      <category term="zillow php" scheme="http://vadimg.com/tags/zillow-php/"/>
+    
+      <category term="zillow php class" scheme="http://vadimg.com/tags/zillow-php-class/"/>
+    
+      <category term="zillow php library" scheme="http://vadimg.com/tags/zillow-php-library/"/>
+    
+      <category term="zillow php wrapper" scheme="http://vadimg.com/tags/zillow-php-wrapper/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Bootstrap 2.x eCommerce Theme</title>
+    <link href="http://vadimg.com/2014/08/Bootstrap%202.x%20eCommerce%20Theme/"/>
+    <id>http://vadimg.com/2014/08/Bootstrap 2.x eCommerce Theme/</id>
+    <published>2014-08-09T00:45:09.000Z</published>
+    <updated>2017-06-12T01:21:28.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>
+  </p><h1 style="font-weight: bold; color: #333333;">Bootstrap E-Commerce Theme</h1>
+<p></p>
+<p style="color: #333333;">This is a simple Bootstrap 2.x theme used for an eCommerce website. Check the demo
+  link, or screenshot below.</p>
+
+<p>
+  </p><h2 style="font-weight: bold; color: #333333;">
+    <a class="anchor" style="color: #4183c4;" href="https://github.com/VinceG/Bootstrap-ecommerce-theme#pages" name="user-content-pages" target="_blank" rel="external"></a>Pages</h2>
+<p></p>
+<p>
+  <ol class="task-list" style="color: #333333;">
+    <br>
+    <li>Home</li>
+    <br>
+    <li>Checkout</li>
+    <br>
+    <li>Order Placement</li>
+    <br>
+    <li>Order Status</li>
+    <br>
+    <li>About Us</li>
+    <br>
+    <li>Contact Us</li>
+    <br>
+    <li>Categories List</li>
+    <br>
+    <li>Product Page</li>
+    <br>
+  </ol>
+  <br>&nbsp;</p>
+<p>
+  <a href="/assets/2014/08/Screen-Shot-2014-08-08-at-10.38.52-AM.png" target="_blank">
+    <img class="alignnone wp-image-1631 size-medium" src="/assets/2014/08/Screen-Shot-2014-08-08-at-10.38.52-AM-300x284.png" alt="Screen Shot 2014-08-08 at 10.38.52 AM" width="300" height="284">
+  </a>
+</p>
+<p>&nbsp;</p>
+<a id="more"></a>
+<p>&nbsp;</p>
+<p>
+  <a href="https://github.com/VinceG/Bootstrap-ecommerce-theme" target="_blank">https://github.com/VinceG/Bootstrap-ecommerce-theme</a>
+</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;
+  &lt;/p&gt;&lt;h1 style=&quot;font-weight: bold; color: #333333;&quot;&gt;Bootstrap E-Commerce Theme&lt;/h1&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p style=&quot;color: #333333;&quot;&gt;This is a simple Bootstrap 2.x theme used for an eCommerce website. Check the demo
+  link, or screenshot below.&lt;/p&gt;
+
+&lt;p&gt;
+  &lt;/p&gt;&lt;h2 style=&quot;font-weight: bold; color: #333333;&quot;&gt;
+    &lt;a class=&quot;anchor&quot; style=&quot;color: #4183c4;&quot; href=&quot;https://github.com/VinceG/Bootstrap-ecommerce-theme#pages&quot; name=&quot;user-content-pages&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;/a&gt;Pages&lt;/h2&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;
+  &lt;ol class=&quot;task-list&quot; style=&quot;color: #333333;&quot;&gt;
+    &lt;br&gt;
+    &lt;li&gt;Home&lt;/li&gt;
+    &lt;br&gt;
+    &lt;li&gt;Checkout&lt;/li&gt;
+    &lt;br&gt;
+    &lt;li&gt;Order Placement&lt;/li&gt;
+    &lt;br&gt;
+    &lt;li&gt;Order Status&lt;/li&gt;
+    &lt;br&gt;
+    &lt;li&gt;About Us&lt;/li&gt;
+    &lt;br&gt;
+    &lt;li&gt;Contact Us&lt;/li&gt;
+    &lt;br&gt;
+    &lt;li&gt;Categories List&lt;/li&gt;
+    &lt;br&gt;
+    &lt;li&gt;Product Page&lt;/li&gt;
+    &lt;br&gt;
+  &lt;/ol&gt;
+  &lt;br&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;
+  &lt;a href=&quot;/assets/2014/08/Screen-Shot-2014-08-08-at-10.38.52-AM.png&quot; target=&quot;_blank&quot;&gt;
+    &lt;img class=&quot;alignnone wp-image-1631 size-medium&quot; src=&quot;/assets/2014/08/Screen-Shot-2014-08-08-at-10.38.52-AM-300x284.png&quot; alt=&quot;Screen Shot 2014-08-08 at 10.38.52 AM&quot; width=&quot;300&quot; height=&quot;284&quot;&gt;
+  &lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="bootstrap" scheme="http://vadimg.com/tags/bootstrap/"/>
+    
+      <category term="free template" scheme="http://vadimg.com/tags/free-template/"/>
+    
+      <category term="free theme" scheme="http://vadimg.com/tags/free-theme/"/>
+    
+      <category term="theme" scheme="http://vadimg.com/tags/theme/"/>
+    
+      <category term="commerce" scheme="http://vadimg.com/tags/commerce/"/>
+    
+      <category term="e-commerce" scheme="http://vadimg.com/tags/e-commerce/"/>
+    
+      <category term="ecommerce" scheme="http://vadimg.com/tags/ecommerce/"/>
+    
+      <category term="free ecommerce" scheme="http://vadimg.com/tags/free-ecommerce/"/>
+    
+      <category term="open source" scheme="http://vadimg.com/tags/open-source/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Support Ticket Management</title>
+    <link href="http://vadimg.com/2014/07/Support%20Ticket%20Management/"/>
+    <id>http://vadimg.com/2014/07/Support Ticket Management/</id>
+    <published>2014-07-04T05:11:42.000Z</published>
+    <updated>2017-06-12T01:21:28.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>This past week i’ve been working on the redesign and performance updates to our company’s
+  Support Manager section of our application. The update not only introduced new
+  workflow, design and features, but it also performs a lot better than the previous
+  one.</p>
+<p>Some of the new features built in:</p>
+<p>
+  <ul>
+    <br>
+    <li>Quick Filtering</li>
+    <br>
+    <li>Categories, Statuses, Priorities, Assignees, Teams</li>
+    <br>
+    <li>Quick Inline Editing</li>
+    <br>
+    <li>Multi Moderation (Apply multiple moderation actions in a single click)</li>
+    <br>
+    <li>Quick Open/Close Ticket</li>
+    <br>
+    <li>Real time view of who currently viewing a ticket from the tickets pipeline</li>
+    <br>
+    <li>Full Search capabilities</li>
+    <br>
+    <li>Activity Log</li>
+    <br>
+    <li>Statistics</li>
+    <br>
+    <li>Participants</li>
+    <br>
+    <li>Notifications</li>
+    <br>
+    <li>Mentions (using @name can tag someone to receive a notification and an email)</li>
+    <br>
+    <li>Ticket View:</li></ul></p>
+<p>
+  <ul>
+    <br>
+    <li>Quick Close, Open, Close &amp; Next</li>
+    <br>
+    <li>Real Time Currently viewing ticket (ajax updates)</li>
+    <br>
+    <li>Last Users Viewed</li>
+    <br>
+    <li>Multi-Moderation</li>
+    <br>
+    <li>Moderation Options</li>
+    <br>
+    <li>Pre-Defined templates to select for a response to the client</li>
+    <br>
+    <li>Comments</li>
+    <br>
+  </ul>
+  <br>
+  
+  <br>
+  
+  <br>Below is an example of how it used to look like vs. how it is now.</p>
+<p>
+  </p><h3>Old Design</h3>
+  <br>
+  <a href="/assets/2014/07/Screen-Shot-2014-07-03-at-2.16.56-PM.png">
+    <img class="alignnone size-medium wp-image-1618" src="/assets/2014/07/Screen-Shot-2014-07-03-at-2.16.56-PM-300x140.png" alt="Screen Shot 2014-07-03 at 2.16.56 PM" width="300" height="140">
+  </a>
+  <a href="/assets/2014/07/Screen-Shot-2014-07-03-at-2.17.43-PM.png">
+    <img class="alignnone size-thumbnail wp-image-1619" src="/assets/2014/07/Screen-Shot-2014-07-03-at-2.17.43-PM-150x150.png" alt="Screen Shot 2014-07-03 at 2.17.43 PM" width="150" height="150">
+  </a>
+<p></p>
+<p>&nbsp;</p>
+<p>
+  </p><h3>New Design</h3>
+  <br>
+  <a href="/assets/2014/07/Screen-Shot-2014-07-03-at-1.49.16-PM1.png">
+    <img class="alignnone size-thumbnail wp-image-1613" src="/assets/2014/07/Screen-Shot-2014-07-03-at-1.49.16-PM1-150x150.png" alt="Screen Shot 2014-07-03 at 1.49.16 PM" width="150" height="150">
+  </a>
+  <a href="/assets/2014/07/Screen-Shot-2014-07-03-at-1.48.51-PM1.png">
+    <img class="alignnone size-thumbnail wp-image-1614" src="/assets/2014/07/Screen-Shot-2014-07-03-at-1.48.51-PM1-150x150.png" alt="Screen Shot 2014-07-03 at 1.48.51 PM" width="150" height="150">
+  </a>
+  <a href="/assets/2014/07/Screen-Shot-2014-07-03-at-1.49.32-PM1.png">
+    <img class="alignnone size-thumbnail wp-image-1615" src="/assets/2014/07/Screen-Shot-2014-07-03-at-1.49.32-PM1-150x150.png" alt="Screen Shot 2014-07-03 at 1.49.32 PM" width="150" height="150">
+  </a>
+  <a href="/assets/2014/07/Screen-Shot-2014-07-03-at-1.50.01-PM1.png">
+    <img class="alignnone size-thumbnail wp-image-1616" src="/assets/2014/07/Screen-Shot-2014-07-03-at-1.50.01-PM1-150x150.png" alt="Screen Shot 2014-07-03 at 1.50.01 PM" width="150" height="150">
+  </a>
+  <a href="/assets/2014/07/Screen-Shot-2014-07-03-at-1.50.19-PM1.png">
+    <img class="alignnone size-thumbnail wp-image-1617" src="/assets/2014/07/Screen-Shot-2014-07-03-at-1.50.19-PM1-150x150.png" alt="Screen Shot 2014-07-03 at 1.50.19 PM" width="150" height="150">
+  </a>
+<p></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;This past week i’ve been working on the redesign and performance updates to our company’s
+  Support Manager section of our application. T
+    
+    </summary>
+    
+      <category term="bootstrap" scheme="http://vadimg.com/categories/bootstrap/"/>
+    
+      <category term="PHP" scheme="http://vadimg.com/categories/bootstrap/PHP/"/>
+    
+      <category term="support" scheme="http://vadimg.com/categories/bootstrap/PHP/support/"/>
+    
+    
+      <category term="PHP" scheme="http://vadimg.com/tags/PHP/"/>
+    
+      <category term="bootstrap" scheme="http://vadimg.com/tags/bootstrap/"/>
+    
+      <category term="manager" scheme="http://vadimg.com/tags/manager/"/>
+    
+      <category term="support" scheme="http://vadimg.com/tags/support/"/>
+    
+      <category term="support ticket" scheme="http://vadimg.com/tags/support-ticket/"/>
+    
+      <category term="support tickets" scheme="http://vadimg.com/tags/support-tickets/"/>
+    
+      <category term="ticket" scheme="http://vadimg.com/tags/ticket/"/>
+    
+      <category term="tickets" scheme="http://vadimg.com/tags/tickets/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>PHP 5.5 Zend Certified Engineer</title>
+    <link href="http://vadimg.com/2014/02/PHP%205.5%20Zend%20Certified%20Engineer/"/>
+    <id>http://vadimg.com/2014/02/PHP 5.5 Zend Certified Engineer/</id>
+    <published>2014-02-16T05:21:41.000Z</published>
+    <updated>2017-06-12T01:21:28.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Took the test on Friday February 14th 2014 and passed it. I now hold all certification
+  (again). Not that it means anything but i like taking those kind of tests to keep
+  myself up-to date and see if i can pass them. This one was probably the hardest
+  one i took between the others, Mainly due to the fact that the 5.5 new study guide
+  has lots of errors in it. But i’m pleased overall of taking it an passing. Since
+  i took 3 before it cost me $125 instead of the regular $195.</p>
+<p>&nbsp;</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Took the test on Friday February 14th 2014 and passed it. I now hold all certification
+  (again). Not that it means anything but i like t
+    
+    </summary>
+    
+      <category term="frameworks" scheme="http://vadimg.com/categories/frameworks/"/>
+    
+      <category term="PHP" scheme="http://vadimg.com/categories/frameworks/PHP/"/>
+    
+      <category term="PHP 5.5" scheme="http://vadimg.com/categories/frameworks/PHP/PHP-5-5/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Yii eCommerce Public On Github</title>
+    <link href="http://vadimg.com/2014/02/Yii%20eCommerce%20Public%20On%20Github/"/>
+    <id>http://vadimg.com/2014/02/Yii eCommerce Public On Github/</id>
+    <published>2014-02-14T03:16:00.000Z</published>
+    <updated>2017-06-12T01:21:28.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>I’ve released the current state of the Yii eCommerce platform. The only thing that
+  was worked on so far was the Admin section so there is no frontend to the application.
+  for more information please visit Github:</p>
+<p>
+  <a href="https://github.com/VinceG/yii-ecommerce" target="_blank">https://github.com/VinceG/yii-ecommerce</a>
+</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;I’ve released the current state of the Yii eCommerce platform. The only thing that
+  was worked on so far was the Admin section so there 
+    
+    </summary>
+    
+      <category term="apache" scheme="http://vadimg.com/categories/apache/"/>
+    
+      <category term="frameworks" scheme="http://vadimg.com/categories/apache/frameworks/"/>
+    
+      <category term="javascript" scheme="http://vadimg.com/categories/apache/frameworks/javascript/"/>
+    
+      <category term="jquery" scheme="http://vadimg.com/categories/apache/frameworks/javascript/jquery/"/>
+    
+      <category term="PHP" scheme="http://vadimg.com/categories/apache/frameworks/javascript/jquery/PHP/"/>
+    
+      <category term="php 5.3" scheme="http://vadimg.com/categories/apache/frameworks/javascript/jquery/PHP/php-5-3/"/>
+    
+      <category term="PHP 5.5" scheme="http://vadimg.com/categories/apache/frameworks/javascript/jquery/PHP/php-5-3/PHP-5-5/"/>
+    
+      <category term="yii" scheme="http://vadimg.com/categories/apache/frameworks/javascript/jquery/PHP/php-5-3/PHP-5-5/yii/"/>
+    
+      <category term="Yii E-Commerce" scheme="http://vadimg.com/categories/apache/frameworks/javascript/jquery/PHP/php-5-3/PHP-5-5/yii/Yii-E-Commerce/"/>
+    
+    
+      <category term="yii" scheme="http://vadimg.com/tags/yii/"/>
+    
+      <category term="ecommerce" scheme="http://vadimg.com/tags/ecommerce/"/>
+    
+      <category term="open source" scheme="http://vadimg.com/tags/open-source/"/>
+    
+      <category term="yii ecommerce" scheme="http://vadimg.com/tags/yii-ecommerce/"/>
+    
+      <category term="github" scheme="http://vadimg.com/tags/github/"/>
+    
+      <category term="os" scheme="http://vadimg.com/tags/os/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Enterprise Applications - Making Them Social</title>
+    <link href="http://vadimg.com/2014/02/Enterprise%20Applications%20-%20Making%20Them%20Social/"/>
+    <id>http://vadimg.com/2014/02/Enterprise Applications - Making Them Social/</id>
+    <published>2014-02-10T15:47:15.000Z</published>
+    <updated>2017-06-12T01:21:28.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>I’ve been working full time for a company in the real estate industry for nearly
+  two years now. As the senior developer i’d had the opportunity to use and experience
+  with various technologies, services and tools that i haven’t used before. I’ve
+  developed the entire company software, tools they use and the iPhone App that is
+  available for free on the Apple App Store.</p>
+<p>When i started working back in July 2012 they hired me after they acquired a software
+  they wanted to use that was poorly coded, used several different frameworks along
+  with custom scripts and native PHP which made everything a big mess, not to mention
+  the UI and design was horrible. since from a financial standpoint, timeframes and
+  deadlines i couldn’t start from scratch so we had to use the software as is, just
+  fix and rebuild as the staff was working on it while trying to write good clean
+  separated code as we moved forward.</p>
+<p>I’ll list some of the pages that were redesigned and rebuilt in order to make a better
+  user experience and a better application workflow overall.</p>
+<p>Some info about the technologies being used:</p>
+<p>
+  <ul>
+    <br>
+    <li>jQuery</li>
+    <br>
+    <li>Bootstrap</li>
+    <br>
+    <li>PhoneGap (HTML5, JS, CSS, Jquery Mobile)</li>
+    <br>
+    <li>PHP 5.4</li>
+    <br>
+    <li>Yii Framework (API)</li>
+    <br>
+    <li>MySQL</li>
+    <br>
+    <li>AWS (EC2, RDS, DynamoDB, SES, SQS, S3, ELB, IAM, ElastiCache, CloudFront)</li>
+    <br>
+  </ul>
+  <br>Stats:</p>
+<p>
+  <ul>
+    <br>
+    <li>2 Large EC2 Instances</li>
+    <br>
+    <li>1 RDS database 1 read replication (&gt; 10 Million Records and &gt; 11 GB)</li>
+    <br>
+    <li>3 S3 Buckets (over 1TB of files)</li>
+    <br>
+    <li>~50,000 Emails sent monthly</li>
+    <br>
+    <li>35 Cron jobs</li>
+    <br>
+    <li>1 developer</li>
+    <br>
+    <li>8,666 Github Commits (Started May 29 2012)</li>
+    <br>
+    <li>20 Months, 3,200 hours</li>
+    <br>
+  </ul>
+</p>
+<p>
+  </p><h3>Order Page</h3>
+  <br>The original order page was built in 3-4 different pages, meaning the user was
+  to fill the first page, click continue and the order id was created and the basic
+  info was set, then they’ll move to the second page for some more info, third page
+  is the payment info and forth is the order completion message.<p></p>
+<p>The new redesign is a single page, that uses bootstrap, wizard and ajax save and
+  validation on a single page. Each step the data is validated and saved if the page
+  refreshes the user goes back where he last left of.</p>
+<p>Old:</p>
+<p>
+  <a href="/assets/2014/02/photofun-565817540.jpg">
+    <img class="alignnone  wp-image-1554" alt="photofun-565817540" src="/assets/2014/02/photofun-565817540-300x296.jpg" width="180" height="178">
+  </a>
+</p>
+<p>&nbsp;</p>
+<p>New:</p>
+<p>
+  <a href="/assets/2014/02/photofun-2102123463.jpg">
+    <img class="alignnone  wp-image-1583" alt="photofun-2102123463" src="/assets/2014/02/photofun-2102123463-300x268.jpg" width="180" height="161">
+  </a>
+  <img class="alignnone  wp-image-1559" alt="photofun-758811445" src="/assets/2014/02/photofun-758811445-300x203.jpg" width="180" height="122">
+  <a href="/assets/2014/02/photofun-758810379.jpg">
+    <img class="alignnone  wp-image-1560" alt="photofun-758810379" src="/assets/2014/02/photofun-758810379-300x190.jpg" width="180" height="114">
+  </a>
+</p>
+<p>&nbsp;</p>
+<p>
+  </p><h3>Order Management &amp; view</h3>
+  <br>The staff needed to manage and make sure each order is being updated and completed
+  in time. each update involved a log entry, in some cases a phone call and an email.
+  The design for the old application management screen was plain, not user friendly
+  and usually things were not working as they should’ve.<p></p>
+<p>The new look on the other hand is designed for readability, user experience and easier
+  handling for the staff for each order (New style includes a lot more features that
+  will be discussed shortly).</p>
+<p>Old:</p>
+<p>
+  <a href="/assets/2014/02/photofun-683311300.jpg">
+    <img class="alignnone  wp-image-1555" alt="photofun-683311300" src="/assets/2014/02/photofun-683311300-300x250.jpg" width="180" height="150">
+  </a>
+  <a href="/assets/2014/02/photofun-68336497.jpg">
+    <img class="alignnone  wp-image-1556" alt="photofun-68336497" src="/assets/2014/02/photofun-68336497-300x244.jpg" width="180" height="146">
+  </a>
+  <a href="/assets/2014/02/photofun-68333967.jpg">
+    <img class="alignnone  wp-image-1557" alt="photofun-68333967" src="/assets/2014/02/photofun-68333967-300x256.jpg" width="180" height="154">
+  </a>
+</p>
+<p>New:</p>
+<p>
+  <a href="/assets/2014/02/Screen-Shot-2014-02-05-at-4.59.01-PM.png">
+    <img class="alignnone  wp-image-1571" alt="Screen Shot 2014-02-05 at 4.59.01 PM" src="/assets/2014/02/Screen-Shot-2014-02-05-at-4.59.01-PM-300x236.png" width="180" height="142">
+  </a>
+  <a href="/assets/2014/02/Screen-Shot-2014-02-05-at-5.01.46-PM.png">
+    <img class="alignnone  wp-image-1568" alt="Screen Shot 2014-02-05 at 5.01.46 PM" src="/assets/2014/02/Screen-Shot-2014-02-05-at-5.01.46-PM-272x300.png" width="163" height="180">
+  </a>
+</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>
+  </p><h3>Other Features:</h3>
+  <br>
+  <strong>Currently Viewing &amp; Last Viewed</strong>
+<p></p>
+<p>With more than one staff member usually taking care of the same order it often occurs
+  that one staff member will be working on the same file at the same time, causing
+  multiple emails and phone calls to the same client. We’ve added the last viewed
+  section on the middle left and currently viewing underneath it to show who last
+  viewed this file and when and who is currently viewing it. If someone enters the
+  file a little Notification at the top right of the screen will appear notifying
+  the user who just entered this order and is viewing it. This also applies to clients
+  entering the order on their own dashboard.</p>
+<p>
+  <a href="/assets/2014/02/Screen-Shot-2014-02-05-at-5.01.15-PM.png">
+    <img class="alignnone size-full wp-image-1570" alt="Screen Shot 2014-02-05 at 5.01.15 PM" src="/assets/2014/02/Screen-Shot-2014-02-05-at-5.01.15-PM.png" width="203" height="233">
+  </a>
+</p>
+<p>&nbsp;</p>
+<p>
+  <strong> Auto Assignment Dashboard</strong>
+</p>
+<p>There was a need to create a system that will assign each staff member the order
+  that he is supposed to work on right now and the next one in line. each order placed
+  in line is based on certain parameters, if the order is currently viewed and worked
+  on by another staff member it will not show up in the auto assignment (for example),
+  each staff can see how many he has worked on today, how many are left, other staff
+  members working on what orders and some stats on times that it took to work on
+  a certain order and total time worked on orders today. At the bottom of the order
+  screen they can set when this file should be revisited.</p>
+<p>
+  <a href="/assets/2014/02/Screen-Shot-2014-02-05-at-5.01.28-PM.png">
+    <img class="alignnone  wp-image-1569" alt="Screen Shot 2014-02-05 at 5.01.28 PM" src="/assets/2014/02/Screen-Shot-2014-02-05-at-5.01.28-PM-142x300.png" width="85" height="180">
+  </a>
+  <a href="/assets/2014/02/Screen-Shot-2014-02-05-at-4.59.01-PM.png">
+    <img class="alignnone  wp-image-1571" alt="Screen Shot 2014-02-05 at 4.59.01 PM" src="/assets/2014/02/Screen-Shot-2014-02-05-at-4.59.01-PM-300x236.png" width="180" height="142">
+  </a>
+</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>
+  <strong>Activity Log</strong>
+</p>
+<p>The activity log is all log messages added to each order, staff members can add log
+  entries, emails sent and received regarding this files are also logged and can
+  be viewed by clicking the linkable title, if a client send a support ticket it
+  will also log that. if someone creates an activity log while a staff member is
+  viewing the order page the activity log will refresh and a little notification
+  at the top page will show notifying the user of a new X activity logs. they can
+  also filter them based on certain pre-made filters (show all, show only client,
+  show only emails, show only yours etc…)</p>
+<p>
+  <a href="/assets/2014/02/Screen-Shot-2014-02-05-at-5.01.46-PM.png">
+    <img class="alignnone  wp-image-1568" alt="Screen Shot 2014-02-05 at 5.01.46 PM" src="/assets/2014/02/Screen-Shot-2014-02-05-at-5.01.46-PM-272x300.png" width="163" height="180">
+  </a>
+</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>
+  <strong>Active Users &amp; Active iPhone App Users</strong>
+</p>
+<p>We need to know who was using the website at any given time, staff members and clients.
+  we also wanted to log all the activity and usage on the mobile application, so
+  we created the active users page to do just that.</p>
+<p>
+  <a href="/assets/2014/02/Screen-Shot-2014-02-05-at-5.04.52-PM.png">
+    <img class="alignnone  wp-image-1566" alt="Screen Shot 2014-02-05 at 5.04.52 PM" src="/assets/2014/02/Screen-Shot-2014-02-05-at-5.04.52-PM-300x238.png" width="180" height="143">
+  </a>
+  <a href="/assets/2014/02/Screen-Shot-2014-02-05-at-5.05.12-PM.png">
+    <img class="alignnone  wp-image-1565" alt="Screen Shot 2014-02-05 at 5.05.12 PM" src="/assets/2014/02/Screen-Shot-2014-02-05-at-5.05.12-PM-300x279.png" width="180" height="167">
+  </a>
+</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>
+  <strong>Calendar &amp; Admin Dashboard Notifications</strong>
+</p>
+<p>Each staff member can create their own individual private events in the calendar,
+  they can also create public events and select who will see that even in their calendar.
+  on the day of the event they receive a notification and the calendar tab is highlighted
+  red.</p>
+<p>
+  <a href="/assets/2014/02/Screen-Shot-2014-02-05-at-5.04.10-PM.png">
+    <img class="alignnone  wp-image-1563" alt="Screen Shot 2014-02-05 at 5.04.10 PM" src="/assets/2014/02/Screen-Shot-2014-02-05-at-5.04.10-PM-300x208.png" width="180" height="125">
+  </a>
+  <a href="/assets/2014/02/Screen-Shot-2014-02-05-at-5.03.35-PM.png">
+    <img class="alignnone  wp-image-1562" alt="Screen Shot 2014-02-05 at 5.03.35 PM" src="/assets/2014/02/Screen-Shot-2014-02-05-at-5.03.35-PM-300x60.png" width="180" height="36">
+  </a>
+</p>
+<p>
+  <strong>Social Notifications</strong>
+</p>
+<p>Recent addition was the social alert navigation bar, which basically shows any new
+  alerts added for this staff member. when someone assigns a support ticket, creates
+  a log entry with the staff member name linked it will create an alert to let the
+  staff member know.</p>
+<p>
+  <a href="/assets/2014/02/Screen-Shot-2014-02-05-at-4.57.40-PM.png">
+    <img class="alignnone  wp-image-1561" alt="Screen Shot 2014-02-05 at 4.57.40 PM" src="/assets/2014/02/Screen-Shot-2014-02-05-at-4.57.40-PM-300x54.png" width="180" height="32">
+  </a>
+</p>
+<p>
+  <strong>Assignment Page</strong>
+</p>
+<p>In order to provide the best results the assignment page was rebuilt and designed
+  to make the assignment process easier. each order will show the closest X appraisers
+  to the property with useful information for the engager to determine who to assign
+  this to by calling or sending emails/invites to the appraisers.</p>
+<p>
+  <a href="/assets/2014/02/Screen-Shot-2014-02-05-at-5.04.26-PM.png">
+    <img class="alignnone  wp-image-1567" alt="Screen Shot 2014-02-05 at 5.04.26 PM" src="/assets/2014/02/Screen-Shot-2014-02-05-at-5.04.26-PM-300x226.png" width="180" height="136">
+  </a>
+</p>
+<p>&nbsp;</p>
+<p>
+  </p><h3>API</h3>
+  <br>We’ve built an API so third party companies can integrate with our software and
+  service. we also use the same API for the iPhone application we’ve built.<p></p>
+<p>
+  <a href="/assets/2014/02/photofun-184061529.jpg">
+    <img class="alignnone  wp-image-1578" alt="photofun-184061529" src="/assets/2014/02/photofun-184061529-300x198.jpg" width="180" height="119">
+  </a>
+  <a href="/assets/2014/02/photofun-1881615018.jpg">
+    <img class="alignnone  wp-image-1579" alt="photofun-1881615018" src="/assets/2014/02/photofun-1881615018-300x148.jpg" width="180" height="89">
+  </a>
+  <a href="/assets/2014/02/photofun-1881615030.jpg">
+    <img class="alignnone  wp-image-1580" alt="photofun-1881615030" src="/assets/2014/02/photofun-1881615030-300x135.jpg" width="180" height="81">
+  </a>
+  <a href="/assets/2014/02/photofun-1840512626.jpg">
+    <img class="alignnone  wp-image-1581" alt="photofun-1840512626" src="/assets/2014/02/photofun-1840512626-300x172.jpg" width="180" height="103">
+  </a>
+</p>
+<p>Those changes and hundreds others make the daily task of managing and running the
+  company an easier task. Some of the features included can be seen by just looking
+  at the Admin Dashboard.</p>
+<p>
+  <a href="/assets/2014/02/photofun-149629590.jpg">
+    <img class="alignnone  wp-image-1576" alt="photofun-149629590" src="/assets/2014/02/photofun-149629590-300x292.jpg" width="180" height="175">
+  </a>
+</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;I’ve been working full time for a company in the real estate industry for nearly
+  two years now. As the senior developer i’d had the opp
+    
+    </summary>
+    
+      <category term="apache" scheme="http://vadimg.com/categories/apache/"/>
+    
+      <category term="api" scheme="http://vadimg.com/categories/apache/api/"/>
+    
+      <category term="bootstrap" scheme="http://vadimg.com/categories/apache/api/bootstrap/"/>
+    
+      <category term="frameworks" scheme="http://vadimg.com/categories/apache/api/bootstrap/frameworks/"/>
+    
+      <category term="jquery" scheme="http://vadimg.com/categories/apache/api/bootstrap/frameworks/jquery/"/>
+    
+      <category term="mysql" scheme="http://vadimg.com/categories/apache/api/bootstrap/frameworks/jquery/mysql/"/>
+    
+      <category term="PHP" scheme="http://vadimg.com/categories/apache/api/bootstrap/frameworks/jquery/mysql/PHP/"/>
+    
+      <category term="php 5.3" scheme="http://vadimg.com/categories/apache/api/bootstrap/frameworks/jquery/mysql/PHP/php-5-3/"/>
+    
+      <category term="PHP 5.5" scheme="http://vadimg.com/categories/apache/api/bootstrap/frameworks/jquery/mysql/PHP/php-5-3/PHP-5-5/"/>
+    
+    
+      <category term="application" scheme="http://vadimg.com/tags/application/"/>
+    
+      <category term="PHP" scheme="http://vadimg.com/tags/PHP/"/>
+    
+      <category term="bootstrap" scheme="http://vadimg.com/tags/bootstrap/"/>
+    
+      <category term="jquery" scheme="http://vadimg.com/tags/jquery/"/>
+    
+      <category term="yii" scheme="http://vadimg.com/tags/yii/"/>
+    
+      <category term="framework" scheme="http://vadimg.com/tags/framework/"/>
+    
+      <category term="social" scheme="http://vadimg.com/tags/social/"/>
+    
+      <category term="ajax" scheme="http://vadimg.com/tags/ajax/"/>
+    
+      <category term="enterprise" scheme="http://vadimg.com/tags/enterprise/"/>
+    
+      <category term="rebuild" scheme="http://vadimg.com/tags/rebuild/"/>
+    
+      <category term="redesign" scheme="http://vadimg.com/tags/redesign/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Bootstrap Admin Theme 3.x – Available Free @ Github</title>
+    <link href="http://vadimg.com/2014/01/Bootstrap%20Admin%20Theme%203.x%20%E2%80%93%20Available%20Free%20@%20Github/"/>
+    <id>http://vadimg.com/2014/01/Bootstrap Admin Theme 3.x – Available Free @ Github/</id>
+    <published>2014-01-05T08:18:06.000Z</published>
+    <updated>2017-06-12T01:21:28.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>A generic admin theme built with Bootstrap 3.x free for both personal and commercial
+  use.</p>
+<p>This is still a work in progress.</p>
+<p>Pages:</p>
+<p>
+  <ul>
+    <br>
+    <li>Login</li>
+    <br>
+    <li>Admin Dashboard (Tables, Statistics, Chart, Media Gallery)</li>
+    <br>
+    <li>Full Calendar (Viewing calendar, adding events, dragging events)</li>
+    <br>
+    <li>Statistics &amp; Charts (Multiple examples of Pie, Bar, Line charts using Morris.js,
+      knob.js, jquery flot, easypiechart)</li>
+    <br>
+    <li>Buttons &amp; Icons</li>
+    <br>
+    <li>WYSIWYG &amp; HTML 5 Editors</li>
+    <br>
+    <li>Forms &amp; Wizard</li>
+    <br>
+    <li>Tables &amp; Bootstrap dataTables</li>
+    <br>
+    <li>UI &amp; Interface Elements (Modals, Popovers, Tooltips, Alerts, Notifications,
+      Labels, Progress Bars)</li>
+    <br>
+  </ul>
+  <br>Demo:</p>
+<p>
+  <a href="http://vinceg.github.io/Bootstrap-Admin-Theme-3/" target="_blank">http://vinceg.github.io/Bootstrap-Admin-Theme-3</a>
+</p>
+<p>Github:</p>
+<p>
+  <a href="https://github.com/VinceG/Bootstrap-Admin-Theme-3" target="_blank">https://github.com/VinceG/Bootstrap-Admin-Theme-3</a>
+</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;A generic admin theme built with Bootstrap 3.x free for both personal and commercial
+  use.&lt;/p&gt;
+&lt;p&gt;This is still a work in progress.&lt;/p&gt;
+
+    
+    </summary>
+    
+    
+      <category term="bootstrap" scheme="http://vadimg.com/tags/bootstrap/"/>
+    
+      <category term="admin" scheme="http://vadimg.com/tags/admin/"/>
+    
+      <category term="theme" scheme="http://vadimg.com/tags/theme/"/>
+    
+      <category term="bootstrap 3" scheme="http://vadimg.com/tags/bootstrap-3/"/>
+    
+      <category term="bootstrap admin theme" scheme="http://vadimg.com/tags/bootstrap-admin-theme/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>PHP 5.5 Certification Exam</title>
+    <link href="http://vadimg.com/2013/12/PHP%205.5%20Certification%20Exam/"/>
+    <id>http://vadimg.com/2013/12/PHP 5.5 Certification Exam/</id>
+    <published>2013-12-31T02:39:22.000Z</published>
+    <updated>2017-06-12T01:21:28.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Zend announced the release of the PHP 5.5 Certification exam. This brings the PHP
+  5.3 exam to an end of life by December 31st. I am planning on taking the exam in
+  the next couple of months. I’ll spend these couple of months reading and studying
+  all the new features and changes since 5.3 . Here is the list of topics listed
+  in the
+  <a href="http://www.zend.com/services/certification/php-certification/" target="_blank">Zend Certification Website</a>:</p>
+<p>&nbsp;</p>
+<p>
+  <div class="dotted-line"></div>
+</p>
+<p>
+  </p><h2>Exam Information</h2>
+<p></p>
+<p>
+  <table width="100%" border="0">
+</table></p>
+<p>
+  <tbody>
+</tbody></p>
+<p>
+  <tr>
+</tr></p>
+<p>
+  <th style="font-weight: bold; text-align: left;" width="33%">PHP Basics</th>
+</p>
+<p>
+  <th style="text-align: left; font-weight: bold;" width="33%">Functions</th>
+</p>
+<p>
+  <th style="text-align: left; font-weight: bold;" width="34%">Data Format &amp; Types</th>
+  <br>
+  
+</p>
+<p>
+  <tr>
+</tr></p>
+<p>
+  <td>
+</td></p>
+<p>
+  <ul>
+    <br>
+    <li>Syntax</li>
+    <br>
+    <li>Operators</li>
+    <br>
+    <li>Variables</li>
+    <br>
+    <li>Control Structures</li>
+    <br>
+    <li>Language Constructs and Functions</li>
+    <br>
+    <li>Namespaces
+      <em>
+    </em></li>
+    <br>
+    <li>Extensions</li>
+    <br>
+    <li>Config</li>
+    <br>
+    <li>Performance/bytecode caching 
+    </li>
+    <br>
+  </ul>
+  <br>
+  
+</p>
+<p>
+  <td>
+</td></p>
+<p>
+  <ul>
+    <br>
+    <li>Arguments</li>
+    <br>
+    <li>Variables</li>
+    <br>
+    <li>References</li>
+    <br>
+    <li>Returns</li>
+    <br>
+    <li>Variable Scope</li>
+    <br>
+    <li>Anonymous Functions, closures *</li>
+    <br>
+  </ul>
+  <br>
+  
+</p>
+<p>
+  <td>
+</td></p>
+<p>
+  <ul>
+    <br>
+    <li>XML Basics</li>
+    <br>
+    <li>SimpleXML</li>
+    <br>
+    <li>XML Extension</li>
+    <br>
+    <li>Webservices Basics</li>
+    <br>
+    <li>SOAP</li>
+    <br>
+    <li>JSON
+      <em>
+    </em></li>
+    <br>
+    <li>DateTime 
+    </li>
+    <br>
+    <li>DOMDocument</li>
+    <br>
+  </ul>
+  <br>
+  
+  <br>
+  
+  <br>
+  
+  <br>
+  
+</p>
+<p>
+  <div class="dotted-line"></div>
+</p>
+<p>
+  <table summary="" width="100%" border="0" cellspacing="1" cellpadding="1" align="">
+</table></p>
+<p>
+  <tbody>
+</tbody></p>
+<p>
+  <tr>
+</tr></p>
+<p>
+  <td style="font-weight: bold;" width="33%">Web Features</td>
+</p>
+<p>
+  <td style="font-weight: bold;" width="33%">Object Oriented Programming</td>
+</p>
+<p>
+  <td style="font-weight: bold;" width="34%">Security</td>
+  <br>
+  
+</p>
+<p>
+  <tr>
+</tr></p>
+<p>
+  <td>
+</td></p>
+<p>
+  <ul>
+    <br>
+    <li>Sessions</li>
+    <br>
+    <li>Forms</li>
+    <br>
+    <li>GET and POST data</li>
+    <br>
+    <li>Cookies</li>
+    <br>
+    <li>HTTP Headers</li>
+    <br>
+    <li>HTTP Authentication</li>
+    <br>
+    <li>HTTP Status Codes *</li>
+    <br>
+  </ul>
+  <br>
+  <span style="font-weight: bold;">
+    <br>I/O
+    <br>
+  </span>
+</p>
+<p>
+  <ul>
+    <br>
+    <li>Files</li>
+    <br>
+    <li>Reading</li>
+    <br>
+    <li>Writing</li>
+    <br>
+    <li>File System Functions</li>
+    <br>
+    <li>Streams</li>
+    <br>
+    <li>Contexts</li>
+    <br>
+  </ul>
+  <br>
+  
+</p>
+<p>
+  <td>
+</td></p>
+<p>
+  <ul>
+    <br>
+    <li>Instantiation</li>
+    <br>
+    <li>Modifiers/Inheritance</li>
+    <br>
+    <li>Interfaces</li>
+    <br>
+    <li>Exceptions</li>
+    <br>
+    <li>Autoload</li>
+    <br>
+    <li>Reflection</li>
+    <br>
+    <li>Type Hinting</li>
+    <br>
+    <li>Class Constants</li>
+    <br>
+    <li>Late Static Binding</li>
+    <br>
+    <li>Magic (_
+      <em>) Methods</em></li>
+    <br>
+    <li>Instance Methods &amp; Properties</li>
+    <br>
+    <li>SPL</li>
+    <br>
+    <li>Traits 
+    </li>
+    <br>
+  </ul>
+  <br>
+  
+</p>
+<p>
+  <td>
+</td></p>
+<p>
+  <ul>
+    <br>
+    <li>Configuration</li>
+    <br>
+    <li>Session Security</li>
+    <br>
+    <li>Cross-Site Scripting</li>
+    <br>
+    <li>Cross-Site Request Forgeries</li>
+    <br>
+    <li>SQL Injection</li>
+    <br>
+    <li>Remote Code Injection</li>
+    <br>
+    <li>Email Injection</li>
+    <br>
+    <li>Filter Input</li>
+    <br>
+    <li>Escape Output</li>
+    <br>
+    <li>Encryption, Hashing algorithms</li>
+    <br>
+    <li>File uploads</li>
+    <br>
+    <li>PHP Configuration</li>
+    <br>
+    <li>Password hashing API *</li>
+    <br>
+  </ul>
+  <br>
+  
+  <br>
+  
+  <br>
+  
+  <br>
+  
+</p>
+<p>
+  <div class="dotted-line"></div>
+</p>
+<p>
+  <table summary="" width="100%" border="0" cellspacing="1" cellpadding="1" align="">
+</table></p>
+<p>
+  <tbody>
+</tbody></p>
+<p>
+  <tr>
+</tr></p>
+<p>
+  <td style="font-weight: bold;" width="33%">Strings &amp; Patterns</td>
+</p>
+<p>
+  <td style="font-weight: bold;" width="33%">Databases &amp; SQL</td>
+</p>
+<p>
+  <td style="font-weight: bold;" width="34%">Arrays</td>
+  <br>
+  
+</p>
+<p>
+  <tr>
+</tr></p>
+<p>
+  <td>
+</td></p>
+<p>
+  <ul>
+    <br>
+    <li>Quoting</li>
+    <br>
+    <li>Matching</li>
+    <br>
+    <li>Extracting</li>
+    <br>
+    <li>Searching</li>
+    <br>
+    <li>Replacing</li>
+    <br>
+    <li>Formatting</li>
+    <br>
+    <li>PCRE</li>
+    <br>
+    <li>NOWDOC</li>
+    <br>
+    <li>Encodings</li>
+    <br>
+  </ul>
+  <br>
+  
+</p>
+<p>
+  <td>
+</td></p>
+<p>
+  <ul>
+    <br>
+    <li>SQL</li>
+    <br>
+    <li>Joins</li>
+    <br>
+    <li>Prepared Statements</li>
+    <br>
+    <li>Transactions</li>
+    <br>
+    <li>PDO</li>
+    <br>
+  </ul>
+  <br>
+  
+</p>
+<p>
+  <td>
+</td></p>
+<p>
+  <ul>
+    <br>
+    <li>Associative Arrays</li>
+    <br>
+    <li>Array Iteration</li>
+    <br>
+    <li>Array Functions</li>
+    <br>
+    <li>SPL, Objects as arrays *</li>
+    <br>
+    <li>Casting</li>
+    <br>
+  </ul>
+  <br>
+  
+  <br>
+  
+  <br>
+  
+  <br>
+  
+  <br>&nbsp;</p>
+<p>As before i’ll probably publish posts in my blog as i walk through those topics myself.
+  It helps me learn the subjects faster.</p>
+<p>&nbsp;</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Zend announced the release of the PHP 5.5 Certification exam. This brings the PHP
+  5.3 exam to an end of life by December 31st. I am pla
+    
+    </summary>
+    
+      <category term="PHP" scheme="http://vadimg.com/categories/PHP/"/>
+    
+      <category term="PHP 5.5" scheme="http://vadimg.com/categories/PHP/PHP-5-5/"/>
+    
+      <category term="zend" scheme="http://vadimg.com/categories/PHP/PHP-5-5/zend/"/>
+    
+    
+      <category term="PHP" scheme="http://vadimg.com/tags/PHP/"/>
+    
+      <category term="exam" scheme="http://vadimg.com/tags/exam/"/>
+    
+      <category term="certification" scheme="http://vadimg.com/tags/certification/"/>
+    
+      <category term="zend" scheme="http://vadimg.com/tags/zend/"/>
+    
+      <category term="php 5.5" scheme="http://vadimg.com/tags/php-5-5/"/>
+    
+      <category term="php exam" scheme="http://vadimg.com/tags/php-exam/"/>
+    
+      <category term="php topics" scheme="http://vadimg.com/tags/php-topics/"/>
+    
+      <category term="php zend certification" scheme="http://vadimg.com/tags/php-zend-certification/"/>
+    
+      <category term="php zend certification exam" scheme="http://vadimg.com/tags/php-zend-certification-exam/"/>
+    
+      <category term="zend certf" scheme="http://vadimg.com/tags/zend-certf/"/>
+    
+      <category term="zend certificaiton" scheme="http://vadimg.com/tags/zend-certificaiton/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Bootstrap Admin Theme - New Pages &amp; Plugins</title>
+    <link href="http://vadimg.com/2013/09/Bootstrap%20Admin%20Theme%20-%20New%20Pages%20&amp;%20Plugins/"/>
+    <id>http://vadimg.com/2013/09/Bootstrap Admin Theme - New Pages &amp; Plugins/</id>
+    <published>2013-09-02T08:07:15.000Z</published>
+    <updated>2017-06-12T01:21:28.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Bootstrap Admin Theme just got even better with two new pages added:</p>
+<p>
+  <ul>
+    <br>
+    <li>Tables</li>
+    <br>
+    <li>HTML 5 Editors</li>
+    <br>
+  </ul>
+  <br>Check out the demo at:
+  <a href="https://github.com/VinceG/Bootstrap-Admin-Theme" target="_blank">https://github.com/VinceG/Bootstrap-Admin-Theme</a>
+</p>
+<p>Github Repo:
+  <a href="https://github.com/VinceG/Bootstrap-Admin-Theme" target="_blank">https://github.com/VinceG/Bootstrap-Admin-Theme</a>
+</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Bootstrap Admin Theme just got even better with two new pages added:&lt;/p&gt;
+&lt;p&gt;
+  &lt;ul&gt;
+    &lt;br&gt;
+    &lt;li&gt;Tables&lt;/li&gt;
+    &lt;br&gt;
+    &lt;li&gt;HTML 5 
+    
+    </summary>
+    
+      <category term="bootstrap" scheme="http://vadimg.com/categories/bootstrap/"/>
+    
+      <category term="PHP" scheme="http://vadimg.com/categories/bootstrap/PHP/"/>
+    
+    
+      <category term="bootstrap" scheme="http://vadimg.com/tags/bootstrap/"/>
+    
+      <category term="admin" scheme="http://vadimg.com/tags/admin/"/>
+    
+      <category term="theme" scheme="http://vadimg.com/tags/theme/"/>
+    
+      <category term="free" scheme="http://vadimg.com/tags/free/"/>
+    
+      <category term="premium" scheme="http://vadimg.com/tags/premium/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>First Data Global Gateway PHP API Service</title>
+    <link href="http://vadimg.com/2013/06/First%20Data%20Global%20Gateway%20PHP%20API%20Service/"/>
+    <id>http://vadimg.com/2013/06/First Data Global Gateway PHP API Service/</id>
+    <published>2013-06-18T03:17:36.000Z</published>
+    <updated>2017-06-12T01:21:28.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>
+  <a href="https://twitter.com/gabrielva" target="_blank">Follow @gabrielva</a>
+</p>
+<p>PHP Wrapper to post api calls to the first data payment processor.</p>
+<p>Supports all transcation types.
+  <br>Supports Transarmor Token for charging credit cards more than once without storing
+  the actual card number.</p>
+<p>Documentation:
+  <br>
+  <a href="https://firstdata.zendesk.com/entries/407571-First-Data-Global-Gateway-e4-Web-Service-API-Reference-Guide" target="_blank" rel="external">https://firstdata.zendesk.com/entries/407571-First-Data-Global-Gateway-e4-Web-Service-API-Reference-Guide</a>
+</p>
+<p>Examples:</p>
+<p>
+  </p><h3>Pre Auth</h3>
+  <br>[gist id=6258558 file=Pre_Auth.php]<p></p>
+<p>
+  </p><h3>Purchase</h3>
+  <br>[gist id=6258558 file=Purchase.php]<p></p>
+<p>
+  </p><h3>Purchase with TransArmor Token</h3>
+  <br>[gist id=6258558 file=Purchase_with_TransArmor_Token.php]<p></p>
+<p>
+  </p><h3>Pre Auth Complete</h3>
+  <br>[gist id=6258558 file=Pre_Auth_Complete.php]<p></p>
+<p>
+  </p><h3>Refund</h3>
+  <br>[gist id=6258558 file=Refund.php]<p></p>
+<p>
+  </p><h3>Void</h3>
+  <br>[gist id=6258558 file=Void.php]<p></p>
+<p>
+  <a href="https://github.com/VinceG/php-first-data-api" target="_blank">Github Repository</a>
+</p>
+<p>©
+  <a href="http://vadimg.com" target="_blank">Vadim Vincent Gabriel</a>
+  <a href="https://twitter.com/gabrielva" target="_blank">Follow @gabrielva</a> 2013</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;
+  &lt;a href=&quot;https://twitter.com/gabrielva&quot; target=&quot;_blank&quot;&gt;Follow @gabrielva&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;PHP Wrapper to post api calls to the first data 
+    
+    </summary>
+    
+      <category term="api" scheme="http://vadimg.com/categories/api/"/>
+    
+      <category term="PHP" scheme="http://vadimg.com/categories/api/PHP/"/>
+    
+    
+      <category term="PHP" scheme="http://vadimg.com/tags/PHP/"/>
+    
+      <category term="api" scheme="http://vadimg.com/tags/api/"/>
+    
+      <category term="api web service" scheme="http://vadimg.com/tags/api-web-service/"/>
+    
+      <category term="first data" scheme="http://vadimg.com/tags/first-data/"/>
+    
+      <category term="gateway" scheme="http://vadimg.com/tags/gateway/"/>
+    
+      <category term="php api" scheme="http://vadimg.com/tags/php-api/"/>
+    
+      <category term="php first data" scheme="http://vadimg.com/tags/php-first-data/"/>
+    
+      <category term="servic3" scheme="http://vadimg.com/tags/servic3/"/>
+    
+      <category term="service" scheme="http://vadimg.com/tags/service/"/>
+    
+      <category term="web" scheme="http://vadimg.com/tags/web/"/>
+    
+      <category term="web service" scheme="http://vadimg.com/tags/web-service/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Backbone.js Issue Tracker - Backbone Tracker</title>
+    <link href="http://vadimg.com/2013/04/Backbone.js%20Issue%20Tracker%20-%20Backbone%20Tracker/"/>
+    <id>http://vadimg.com/2013/04/Backbone.js Issue Tracker - Backbone Tracker/</id>
+    <published>2013-04-07T05:51:05.000Z</published>
+    <updated>2017-06-12T01:21:28.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>I’ve started this project to get familiar with Backbone.js and so far it’s working.
+  I’ve recently fixed the bug where the Issues button was not working after creating
+  an issue and added a new feature: Issue Statuses. The installation process is very
+  simple you just need to fork the project import the schema.sql file and update
+  the db settings under protected/config/main.php.</p>
+<p>A screenshot is attached to give you an idea on how this project looks. Next features
+  planned:</p>
+<ol>
+  <br>
+  <li>
+    <span style="line-height: 15px;">Version Management</span>
+  </li>
+  <br>
+  <li>Manage Statuses (Add/Edit/Delete)</li>
+  <br>
+  <li>Adding Milestones</li>
+  <br>
+  <li>Progress bar for issues</li>
+  <br>
+  <li>Projects</li>
+  <br>
+  <li>Comments</li>
+  <br>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;I’ve started this project to get familiar with Backbone.js and so far it’s working.
+  I’ve recently fixed the bug where the Issues button
+    
+    </summary>
+    
+      <category term="Backbone.js" scheme="http://vadimg.com/categories/Backbone-js/"/>
+    
+      <category term="bootstrap" scheme="http://vadimg.com/categories/Backbone-js/bootstrap/"/>
+    
+      <category term="bug tracker" scheme="http://vadimg.com/categories/Backbone-js/bootstrap/bug-tracker/"/>
+    
+      <category term="javascript" scheme="http://vadimg.com/categories/Backbone-js/bootstrap/bug-tracker/javascript/"/>
+    
+    
+      <category term="PHP" scheme="http://vadimg.com/tags/PHP/"/>
+    
+      <category term="backbone" scheme="http://vadimg.com/tags/backbone/"/>
+    
+      <category term="backbone.js" scheme="http://vadimg.com/tags/backbone-js/"/>
+    
+      <category term="javascript" scheme="http://vadimg.com/tags/javascript/"/>
+    
+      <category term="js" scheme="http://vadimg.com/tags/js/"/>
+    
+      <category term="backbone js" scheme="http://vadimg.com/tags/backbone-js/"/>
+    
+      <category term="backbone.js tutorial" scheme="http://vadimg.com/tags/backbone-js-tutorial/"/>
+    
+      <category term="yii" scheme="http://vadimg.com/tags/yii/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Bootstrap Wizard With jQuery Validation</title>
+    <link href="http://vadimg.com/2013/04/Bootstrap%20Wizard%20With%20jQuery%20Validation/"/>
+    <id>http://vadimg.com/2013/04/Bootstrap Wizard With jQuery Validation/</id>
+    <published>2013-04-01T07:32:31.000Z</published>
+    <updated>2017-06-12T01:21:28.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Twitter Bootstrap Wizard supports jQuery Validation plugin by default, an example
+  was added to demonstrate a simple case when a form needs to be validated in two
+  different steps.</p>
+<p>Example Code:</p>
+<pre>
+$(document).ready(function() {
+      var $validator = $("#commentForm").validate({
+          rules: {
+            emailfield: {
+              required: true,
+              email: true,
+              minlength: 3
+            },
+            namefield: {
+              required: true,
+              minlength: 3
+            },
+            urlfield: {
+              required: true,
+              minlength: 3,
+              url: true
+            }
+          }
+        });
+
+          $('#rootwizard').bootstrapWizard({
+              'tabClass': 'nav nav-pills',
+              'onNext': function(tab, navigation, index) {
+                  var $valid = $("#commentForm").valid();
+                  if(!$valid) {
+                      $validator.focusInvalid();
+                      return false;
+                  }
+              }
+          });
+});
+</pre>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Twitter Bootstrap Wizard supports jQuery Validation plugin by default, an example
+  was added to demonstrate a simple case when a form ne
+    
+    </summary>
+    
+      <category term="bootstrap" scheme="http://vadimg.com/categories/bootstrap/"/>
+    
+      <category term="javascript" scheme="http://vadimg.com/categories/bootstrap/javascript/"/>
+    
+      <category term="jquery" scheme="http://vadimg.com/categories/bootstrap/javascript/jquery/"/>
+    
+    
+      <category term="bootstrap" scheme="http://vadimg.com/tags/bootstrap/"/>
+    
+      <category term="jquery" scheme="http://vadimg.com/tags/jquery/"/>
+    
+      <category term="bootstrap wizard" scheme="http://vadimg.com/tags/bootstrap-wizard/"/>
+    
+      <category term="jquery validation" scheme="http://vadimg.com/tags/jquery-validation/"/>
+    
+      <category term="twitter" scheme="http://vadimg.com/tags/twitter/"/>
+    
+      <category term="twitter bootstrap" scheme="http://vadimg.com/tags/twitter-bootstrap/"/>
+    
+      <category term="twitter bootstrap wizard" scheme="http://vadimg.com/tags/twitter-bootstrap-wizard/"/>
+    
+      <category term="twitter wizard" scheme="http://vadimg.com/tags/twitter-wizard/"/>
+    
+      <category term="validation" scheme="http://vadimg.com/tags/validation/"/>
+    
+      <category term="wizard" scheme="http://vadimg.com/tags/wizard/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Twitter Bootstrap Wizard - Enabling, Disabling, Showing, Hiding, Removing Steps</title>
+    <link href="http://vadimg.com/2013/03/Twitter%20Bootstrap%20Wizard%20-%20Enabling,%20Disabling,%20Showing,%20Hiding,%20Removing%20Steps/"/>
+    <id>http://vadimg.com/2013/03/Twitter Bootstrap Wizard - Enabling, Disabling, Showing, Hiding, Removing Steps/</id>
+    <published>2013-04-01T06:36:36.000Z</published>
+    <updated>2017-06-12T01:21:28.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Latest Twitter bootstrap version adds five new methods. You can now do the following:</p>
+<p>&nbsp;</p>
+<p>
+  <code>
+    <br>// Disable step
+    <br>$(‘#disable-step’).on(‘click’, function() {
+    <br> $(‘#rootwizard’).bootstrapWizard(‘disable’, $(‘#stepid’).val());
+    <br>});
+    <br>// Enable step
+    <br>$(‘#enable-step’).on(‘click’, function() {
+    <br> $(‘#rootwizard’).bootstrapWizard(‘enable’, $(‘#stepid’).val());
+    <br>});
+    <br>// Remove step
+    <br>$(‘#remove-step’).on(‘click’, function() {
+    <br> $(‘#rootwizard’).bootstrapWizard(‘remove’, $(‘#stepid’).val(), true);
+    <br>});
+    <br>// Show step
+    <br>$(‘#show-step’).on(‘click’, function() {
+    <br> $(‘#rootwizard’).bootstrapWizard(‘display’, $(‘#stepid’).val());
+    <br>});
+    <br>// Hide step
+    <br>$(‘#hide-step’).on(‘click’, function() {
+    <br> $(‘#rootwizard’).bootstrapWizard(‘hide’, $(‘#stepid’).val());
+    <br>});
+    <br>
+  </code>
+</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Latest Twitter bootstrap version adds five new methods. You can now do the following:&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;
+  &lt;code&gt;
+    &lt;br&gt;// Disable s
+    
+    </summary>
+    
+      <category term="bootstrap" scheme="http://vadimg.com/categories/bootstrap/"/>
+    
+      <category term="javascript" scheme="http://vadimg.com/categories/bootstrap/javascript/"/>
+    
+    
+      <category term="bootstrap" scheme="http://vadimg.com/tags/bootstrap/"/>
+    
+      <category term="bootstrap wizard" scheme="http://vadimg.com/tags/bootstrap-wizard/"/>
+    
+      <category term="twitter" scheme="http://vadimg.com/tags/twitter/"/>
+    
+      <category term="twitter bootstrap wizard" scheme="http://vadimg.com/tags/twitter-bootstrap-wizard/"/>
+    
+      <category term="wizard" scheme="http://vadimg.com/tags/wizard/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Bootstrap Admin Theme - Available Free @ Github</title>
+    <link href="http://vadimg.com/2013/03/Bootstrap%20Admin%20Theme%20-%20Available%20Free%20@%20Github/"/>
+    <id>http://vadimg.com/2013/03/Bootstrap Admin Theme - Available Free @ Github/</id>
+    <published>2013-03-27T22:48:13.000Z</published>
+    <updated>2017-06-12T01:21:28.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>
+  </p><h1>Bootstrap Admin Theme</h1>
+  <br>A generic admin theme built with Bootstrap free for both personal and commercial
+  use.<p></p>
+<p>This is still a work in progress.</p>
+<p>Pages:</p>
+<p>
+  <ul>
+    <br>
+    <li>Login</li>
+    <br>
+    <li>Admin Dashboard (Tables, Statistics, Chart, Media Gallery)</li>
+    <br>
+    <li>Full Calendar</li>
+    <br>
+    <li>Statistics (Multiple examples of Pie, Bar, Line charts)</li>
+    <br>
+    <li>Buttons &amp; Icons</li>
+    <br>
+    <li>UI &amp; Interface Elements (Modals, Popovers, Tooltips, Alerts, Notifications,
+      Labels, Progress Bars)</li>
+    <br>
+  </ul>
+  <br>Demo:</p>
+<p>
+  <a href="http://vinceg.github.com/Bootstrap-Admin-Theme" target="_blank" rel="external">http://vinceg.github.com/Bootstrap-Admin-Theme</a>
+</p>
+<p>Github:</p>
+<p>
+  <a href="https://github.com/VinceG/Bootstrap-Admin-Theme" target="_blank">https://github.com/VinceG/Bootstrap-Admin-Theme</a>
+</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;
+  &lt;/p&gt;&lt;h1&gt;Bootstrap Admin Theme&lt;/h1&gt;
+  &lt;br&gt;A generic admin theme built with Bootstrap free for both personal and commercial
+  use.&lt;p&gt;&lt;/p
+    
+    </summary>
+    
+    
+      <category term="bootstrap" scheme="http://vadimg.com/tags/bootstrap/"/>
+    
+      <category term="admin" scheme="http://vadimg.com/tags/admin/"/>
+    
+      <category term="admin template" scheme="http://vadimg.com/tags/admin-template/"/>
+    
+      <category term="admin theme" scheme="http://vadimg.com/tags/admin-theme/"/>
+    
+      <category term="bootstrap template" scheme="http://vadimg.com/tags/bootstrap-template/"/>
+    
+      <category term="bootstrap theme" scheme="http://vadimg.com/tags/bootstrap-theme/"/>
+    
+      <category term="free template" scheme="http://vadimg.com/tags/free-template/"/>
+    
+      <category term="free theme" scheme="http://vadimg.com/tags/free-theme/"/>
+    
+      <category term="template" scheme="http://vadimg.com/tags/template/"/>
+    
+      <category term="theme" scheme="http://vadimg.com/tags/theme/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>PHP Console Progress Bar</title>
+    <link href="http://vadimg.com/2013/03/PHP%20Console%20Progress%20Bar/"/>
+    <id>http://vadimg.com/2013/03/PHP Console Progress Bar/</id>
+    <published>2013-03-24T04:48:51.000Z</published>
+    <updated>2017-06-12T01:21:28.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>
+  </p><h1>PHP Console Progress Bar</h1>
+  <br>This class creates and maintains progress bars to be printed to the console. This
+  file is a replica of the ezComponents console progress bar class (@link
+  <a href="http://ezcomponents.org/docs/api/latest/ConsoleTools/ezcConsoleProgressbar.html" target="_blank" rel="external">http://ezcomponents.org/docs/api/latest/ConsoleTools/ezcConsoleProgressbar.html</a>)
+  allows a developer to just use the console progress bar features without the rest
+  of the classes saving all the extra files and classes.<p></p>
+<p>
+  </p><h1>
+    <a href="https://github.com/VinceG/PHP-Console-Progress-Bar#available-options" name="available-options" target="_blank" rel="external"></a>Available Options</h1>
+<p></p>
+<p>
+  <ul>
+    <br>
+    <li>barChar: Processed progress bar char (Default ‘=’)</li>
+    <br>
+    <li>emptyChar: Empty progress bar char (Default ‘-‘)</li>
+    <br>
+    <li>formatString: Progress bar formatted line that actually displays the processed
+      number, step count, total count, percentage etc.. (Default ‘%act% / %max% [%bar%]
+      %fraction%%’)</li>
+    <br>
+    <li>fractionFormat: Progress bar fraction format (Default ‘%01.2f’)</li>
+    <br>
+    <li>progressChar: Progress bar progress leading char (Default ‘&gt;’)</li>
+    <br>
+    <li>redrawFrequency: Redraw/Update the progress bar every X step(s) (Default: 1)</li>
+    <br>
+    <li>step: Progress bar each advance call will advance X step(s) (Default: 1)</li>
+    <br>
+    <li>width: Progress bar width (Default 100)</li>
+    <br>
+    <li>actFormat: Progress bar current step format (Default ‘%.0f’)</li>
+    <br>
+    <li>maxFormat: Progress bar maximum step format (Default ‘%.0f’)</li>
+    <br>
+    <li>max: Progress bar maximum value (When it reaches 100%) (Default 100)</li>
+    <br>
+  </ul>
+  <br>&nbsp;</p>
+<p>
+  <code>
+    <br>&lt; ?php
+    <br>require_once(‘ConsoleProgressBar.php’);
+    <br>// initiate the class with the maximum value being 100
+    <br>$progress = new ConsoleProgressBar(100);
+    <br>// Setting options are done using one of the following:
+    <br>// $progress = new ConsoleProgressBar(100, array(‘step’ =&gt; 5, ‘barChar’ =&gt;
+    ‘+’));
+    <br>// $progress-&gt;setOptions(array(‘step’ =&gt; 5, ‘barChar’ =&gt; ‘+’));
+    <br>// $progress-&gt;setOptions(‘step’, 5);
+    <br>// $progress-&gt;options = array(‘step’ =&gt; 5);
+    <br>// Start the progress bar before the actual actions are taken place
+    <br>$progress-&gt;start();
+    <br>// This is just an example that’s why a simple look is being used
+    <br>// in real world this can be a db record set process or any other long operation
+    that is being
+    <br>// done via the cli
+    <br>for ($i = 0; $i &lt; = 100; $i++) {
+    <br> // Do the actual processing here
+    <br> // …..
+    <br> // …..
+    <br> // …..
+    <br> // Advance one step by default
+    <br> // you can pass a second argument $step which will advance that number of steps
+    <br> $progress-&gt;advance();
+    <br> // For this example we will just sleep for a second
+    <br> sleep(1);
+    <br>}
+    <br>// Call finish at the end to make sure the bar goes to 100% if it didn’t
+    <br>$progress-&gt;finish();
+    <br>
+  </code>
+</p>
+<p>
+  <a href="https://github.com/VinceG/PHP-Console-Progress-Bar" target="_blank">Fork On Github</a>
+</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;
+  &lt;/p&gt;&lt;h1&gt;PHP Console Progress Bar&lt;/h1&gt;
+  &lt;br&gt;This class creates and maintains progress bars to be printed to the console. This
+  file i
+    
+    </summary>
+    
+    
+      <category term="PHP" scheme="http://vadimg.com/tags/PHP/"/>
+    
+      <category term="bar" scheme="http://vadimg.com/tags/bar/"/>
+    
+      <category term="console" scheme="http://vadimg.com/tags/console/"/>
+    
+      <category term="console bar" scheme="http://vadimg.com/tags/console-bar/"/>
+    
+      <category term="console progress" scheme="http://vadimg.com/tags/console-progress/"/>
+    
+      <category term="console progress bar" scheme="http://vadimg.com/tags/console-progress-bar/"/>
+    
+      <category term="php bar" scheme="http://vadimg.com/tags/php-bar/"/>
+    
+      <category term="php console" scheme="http://vadimg.com/tags/php-console/"/>
+    
+      <category term="php console bar" scheme="http://vadimg.com/tags/php-console-bar/"/>
+    
+      <category term="php progress" scheme="http://vadimg.com/tags/php-progress/"/>
+    
+      <category term="php progress bar" scheme="http://vadimg.com/tags/php-progress-bar/"/>
+    
+      <category term="progress" scheme="http://vadimg.com/tags/progress/"/>
+    
+      <category term="progress bar" scheme="http://vadimg.com/tags/progress-bar/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Backbone Tracker - Issue Tracker</title>
+    <link href="http://vadimg.com/2013/03/Backbone%20Tracker%20-%20Issue%20Tracker/"/>
+    <id>http://vadimg.com/2013/03/Backbone Tracker - Issue Tracker/</id>
+    <published>2013-03-18T06:10:11.000Z</published>
+    <updated>2017-06-12T01:21:28.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>
+  </p><h1>Backbone.js Issue Tracker</h1>
+  <br>This is a bug/issue tracker written in Backbone.js, jQuery, Underscore.js, Bootstrap
+  and Yii Framework as the backend.<p></p>
+<p>Project is under development and any contribution is welcomed and appricated.</p>
+<p>
+  </p><h1>
+    <a href="https://github.com/VinceG/Backbone-Tracker#installation-instructions" name="installation-instructions" target="_blank" rel="external"></a>Installation Instructions</h1>
+<p></p>
+<p>
+  <ul>
+    <br>
+    <li>Fork Repository</li>
+    <br>
+    <li>Change the DB settings under application/protected/config/main.php</li>
+    <br>
+    <li>Import the schema.sql</li>
+    <br>
+    <li>Lunch the appliation through the browser navigating to the index.html file</li>
+    <br>
+  </ul>
+  <br>&nbsp;</p>
+<p>
+  <a href="https://github.com/VinceG/Backbone-Tracker" target="_blank">Github Repository</a>
+</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;
+  &lt;/p&gt;&lt;h1&gt;Backbone.js Issue Tracker&lt;/h1&gt;
+  &lt;br&gt;This is a bug/issue tracker written in Backbone.js, jQuery, Underscore.js, Bootstrap
+  an
+    
+    </summary>
+    
+      <category term="Backbone.js" scheme="http://vadimg.com/categories/Backbone-js/"/>
+    
+      <category term="bootstrap" scheme="http://vadimg.com/categories/Backbone-js/bootstrap/"/>
+    
+      <category term="javascript" scheme="http://vadimg.com/categories/Backbone-js/bootstrap/javascript/"/>
+    
+      <category term="jquery" scheme="http://vadimg.com/categories/Backbone-js/bootstrap/javascript/jquery/"/>
+    
+    
+      <category term="backbone" scheme="http://vadimg.com/tags/backbone/"/>
+    
+      <category term="backbone.js" scheme="http://vadimg.com/tags/backbone-js/"/>
+    
+      <category term="bootstrap" scheme="http://vadimg.com/tags/bootstrap/"/>
+    
+      <category term="bug" scheme="http://vadimg.com/tags/bug/"/>
+    
+      <category term="bug tracker" scheme="http://vadimg.com/tags/bug-tracker/"/>
+    
+      <category term="bugs" scheme="http://vadimg.com/tags/bugs/"/>
+    
+      <category term="issue" scheme="http://vadimg.com/tags/issue/"/>
+    
+      <category term="issue tracker" scheme="http://vadimg.com/tags/issue-tracker/"/>
+    
+      <category term="issues" scheme="http://vadimg.com/tags/issues/"/>
+    
+      <category term="javascript" scheme="http://vadimg.com/tags/javascript/"/>
+    
+      <category term="jquery" scheme="http://vadimg.com/tags/jquery/"/>
+    
+      <category term="js" scheme="http://vadimg.com/tags/js/"/>
+    
+      <category term="tracker" scheme="http://vadimg.com/tags/tracker/"/>
+    
+      <category term="underscore" scheme="http://vadimg.com/tags/underscore/"/>
+    
+      <category term="underscore.js" scheme="http://vadimg.com/tags/underscore-js/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Free Bootstrap Admin Theme - Updated</title>
+    <link href="http://vadimg.com/2013/02/Free%20Bootstrap%20Admin%20Theme%20-%20Updated/"/>
+    <id>http://vadimg.com/2013/02/Free Bootstrap Admin Theme - Updated/</id>
+    <published>2013-02-11T00:02:54.000Z</published>
+    <updated>2017-06-12T01:21:28.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Bootstrap admin theme was updated today and now includes the following pages:</p>
+<p>
+  <ul>
+    <br>
+    <li>Login</li>
+    <br>
+    <li>Admin Dashboard (Tables, Statistics, Chart, Media Gallery)</li>
+    <br>
+    <li>Full Calendar</li>
+    <br>
+    <li>Statistics (Multiple examples of Pie, Bar, Line charts)</li>
+    <br>
+    <li>Buttons &amp; Icons</li>
+    <br>
+    <li>UI &amp; Interface Elements (Modals, Popovers, Tooltips, Alerts, Notifications,
+      Labels, Progress Bars)</li>
+    <br>
+  </ul>
+  <br>&nbsp;</p>
+<p>Live demo:</p>
+<p>
+  <a href="http://vinceg.github.com/Bootstrap-Admin-Theme" target="_blank">http://vinceg.github.com/Bootstrap-Admin-Theme</a></p>
+<p>
+  
+</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Bootstrap admin theme was updated today and now includes the following pages:&lt;/p&gt;
+&lt;p&gt;
+  &lt;ul&gt;
+    &lt;br&gt;
+    &lt;li&gt;Login&lt;/li&gt;
+    &lt;br&gt;
+    &lt;li
+    
+    </summary>
+    
+    
+      <category term="bootstrap" scheme="http://vadimg.com/tags/bootstrap/"/>
+    
+      <category term="admin" scheme="http://vadimg.com/tags/admin/"/>
+    
+      <category term="admin template" scheme="http://vadimg.com/tags/admin-template/"/>
+    
+      <category term="admin theme" scheme="http://vadimg.com/tags/admin-theme/"/>
+    
+      <category term="bootstrap theme" scheme="http://vadimg.com/tags/bootstrap-theme/"/>
+    
+      <category term="free template" scheme="http://vadimg.com/tags/free-template/"/>
+    
+      <category term="free theme" scheme="http://vadimg.com/tags/free-theme/"/>
+    
+      <category term="theme" scheme="http://vadimg.com/tags/theme/"/>
+    
+      <category term="open source" scheme="http://vadimg.com/tags/open-source/"/>
+    
+      <category term="bootstrap admin theme" scheme="http://vadimg.com/tags/bootstrap-admin-theme/"/>
+    
+      <category term="free" scheme="http://vadimg.com/tags/free/"/>
+    
+      <category term="bootstrap admin" scheme="http://vadimg.com/tags/bootstrap-admin/"/>
+    
+      <category term="twitter" scheme="http://vadimg.com/tags/twitter/"/>
+    
+      <category term="twitter bootstrap" scheme="http://vadimg.com/tags/twitter-bootstrap/"/>
+    
+      <category term="free admin" scheme="http://vadimg.com/tags/free-admin/"/>
+    
+      <category term="free admin template" scheme="http://vadimg.com/tags/free-admin-template/"/>
+    
+      <category term="free admin theme" scheme="http://vadimg.com/tags/free-admin-theme/"/>
+    
+      <category term="free bootstrap theme" scheme="http://vadimg.com/tags/free-bootstrap-theme/"/>
+    
+      <category term="free theem" scheme="http://vadimg.com/tags/free-theem/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Bootstrap Admin Theme</title>
+    <link href="http://vadimg.com/2013/02/Bootstrap%20Admin%20Theme/"/>
+    <id>http://vadimg.com/2013/02/Bootstrap Admin Theme/</id>
+    <published>2013-02-04T01:46:26.000Z</published>
+    <updated>2017-06-12T01:21:28.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>A generic admin theme built with Bootstrap free for both personal and commercial
+  use.</p>
+<p>This is still a work in progress.</p>
+<p>Pages:</p>
+<p>
+  <ul>
+    <br>
+    <li>Login</li>
+    <br>
+    <li>Admin Dashboard</li>
+    <br>
+  </ul>
+  <br>Preview:</p>
+<p>
+  <a href="/assets/2013/02/Screen-Shot-2013-02-03-at-5.38.18-PM.png">
+    <img class="alignnone size-medium wp-image-1417" alt="Screen Shot 2013-02-03 at 5.38.18 PM" src="/assets/2013/02/Screen-Shot-2013-02-03-at-5.38.18-PM-300x160.png" width="300" height="160">
+  </a>
+</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;A generic admin theme built with Bootstrap free for both personal and commercial
+  use.&lt;/p&gt;
+&lt;p&gt;This is still a work in progress.&lt;/p&gt;
+&lt;p&gt;P
+    
+    </summary>
+    
+    
+      <category term="bootstrap" scheme="http://vadimg.com/tags/bootstrap/"/>
+    
+      <category term="admin" scheme="http://vadimg.com/tags/admin/"/>
+    
+      <category term="admin template" scheme="http://vadimg.com/tags/admin-template/"/>
+    
+      <category term="admin theme" scheme="http://vadimg.com/tags/admin-theme/"/>
+    
+      <category term="bootstrap theme" scheme="http://vadimg.com/tags/bootstrap-theme/"/>
+    
+      <category term="template" scheme="http://vadimg.com/tags/template/"/>
+    
+      <category term="theme" scheme="http://vadimg.com/tags/theme/"/>
+    
+      <category term="bootstrap admin theme" scheme="http://vadimg.com/tags/bootstrap-admin-theme/"/>
+    
+      <category term="bootstrap admin" scheme="http://vadimg.com/tags/bootstrap-admin/"/>
+    
+      <category term="bootstrap admin template" scheme="http://vadimg.com/tags/bootstrap-admin-template/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Yii eCommerce - A Look Inside</title>
+    <link href="http://vadimg.com/2013/02/Yii%20eCommerce%20-%20A%20Look%20Inside/"/>
+    <id>http://vadimg.com/2013/02/Yii eCommerce - A Look Inside/</id>
+    <published>2013-02-02T23:34:37.000Z</published>
+    <updated>2017-06-12T01:21:28.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Here are screenshots taken from the Admin side of the Yii eCommerce Application.
+  All screenshots are self explanatory. Some of the screenshots taken more then once
+  or got deformed due to the Extension used to take those screenshots, just ignore
+  those.</p>
+<p>[gallery link=”file” columns=”6” ids=”1364,1365,1366,1367,1368,1369,1370,1371,1372,1373,1374,1375,1376,1377,1378,1379,1380,1381,1382,1383,1386,1387,1388,1389,1390,1391,1392,1393,1394,1395,1397,1398,1399,1400,1401,1402,1403,1404,1405,1406,1408,1409,1410,1411,1412”]</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Here are screenshots taken from the Admin side of the Yii eCommerce Application.
+  All screenshots are self explanatory. Some of the scre
+    
+    </summary>
+    
+      <category term="frameworks" scheme="http://vadimg.com/categories/frameworks/"/>
+    
+      <category term="PHP" scheme="http://vadimg.com/categories/frameworks/PHP/"/>
+    
+      <category term="php 5.3" scheme="http://vadimg.com/categories/frameworks/PHP/php-5-3/"/>
+    
+      <category term="Gallery" scheme="http://vadimg.com/categories/frameworks/PHP/php-5-3/Gallery/"/>
+    
+      <category term="yii" scheme="http://vadimg.com/categories/frameworks/PHP/php-5-3/Gallery/yii/"/>
+    
+      <category term="Yii E-Commerce" scheme="http://vadimg.com/categories/frameworks/PHP/php-5-3/Gallery/yii/Yii-E-Commerce/"/>
+    
+    
+  </entry>
+  
+</feed>
