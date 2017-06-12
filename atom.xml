@@ -338,12 +338,6 @@
     
       <category term="bootstrap" scheme="http://vadimg.com/tags/bootstrap/"/>
     
-      <category term="free template" scheme="http://vadimg.com/tags/free-template/"/>
-    
-      <category term="free theme" scheme="http://vadimg.com/tags/free-theme/"/>
-    
-      <category term="theme" scheme="http://vadimg.com/tags/theme/"/>
-    
       <category term="commerce" scheme="http://vadimg.com/tags/commerce/"/>
     
       <category term="e-commerce" scheme="http://vadimg.com/tags/e-commerce/"/>
@@ -352,7 +346,13 @@
     
       <category term="free ecommerce" scheme="http://vadimg.com/tags/free-ecommerce/"/>
     
+      <category term="free template" scheme="http://vadimg.com/tags/free-template/"/>
+    
+      <category term="free theme" scheme="http://vadimg.com/tags/free-theme/"/>
+    
       <category term="open source" scheme="http://vadimg.com/tags/open-source/"/>
+    
+      <category term="theme" scheme="http://vadimg.com/tags/theme/"/>
     
   </entry>
   
@@ -467,13 +467,13 @@
       <category term="support" scheme="http://vadimg.com/categories/bootstrap/PHP/support/"/>
     
     
-      <category term="PHP" scheme="http://vadimg.com/tags/PHP/"/>
-    
       <category term="bootstrap" scheme="http://vadimg.com/tags/bootstrap/"/>
     
-      <category term="manager" scheme="http://vadimg.com/tags/manager/"/>
+      <category term="PHP" scheme="http://vadimg.com/tags/PHP/"/>
     
       <category term="support" scheme="http://vadimg.com/tags/support/"/>
+    
+      <category term="manager" scheme="http://vadimg.com/tags/manager/"/>
     
       <category term="support ticket" scheme="http://vadimg.com/tags/support-ticket/"/>
     
@@ -861,19 +861,17 @@
       <category term="PHP 5.5" scheme="http://vadimg.com/categories/apache/api/bootstrap/frameworks/jquery/mysql/PHP/php-5-3/PHP-5-5/"/>
     
     
-      <category term="application" scheme="http://vadimg.com/tags/application/"/>
-    
-      <category term="PHP" scheme="http://vadimg.com/tags/PHP/"/>
-    
       <category term="bootstrap" scheme="http://vadimg.com/tags/bootstrap/"/>
     
       <category term="jquery" scheme="http://vadimg.com/tags/jquery/"/>
     
+      <category term="application" scheme="http://vadimg.com/tags/application/"/>
+    
+      <category term="PHP" scheme="http://vadimg.com/tags/PHP/"/>
+    
       <category term="yii" scheme="http://vadimg.com/tags/yii/"/>
     
       <category term="framework" scheme="http://vadimg.com/tags/framework/"/>
-    
-      <category term="social" scheme="http://vadimg.com/tags/social/"/>
     
       <category term="ajax" scheme="http://vadimg.com/tags/ajax/"/>
     
@@ -882,6 +880,8 @@
       <category term="rebuild" scheme="http://vadimg.com/tags/rebuild/"/>
     
       <category term="redesign" scheme="http://vadimg.com/tags/redesign/"/>
+    
+      <category term="social" scheme="http://vadimg.com/tags/social/"/>
     
   </entry>
   
@@ -942,13 +942,13 @@
     
       <category term="bootstrap" scheme="http://vadimg.com/tags/bootstrap/"/>
     
-      <category term="admin" scheme="http://vadimg.com/tags/admin/"/>
-    
       <category term="theme" scheme="http://vadimg.com/tags/theme/"/>
     
-      <category term="bootstrap 3" scheme="http://vadimg.com/tags/bootstrap-3/"/>
+      <category term="admin" scheme="http://vadimg.com/tags/admin/"/>
     
       <category term="bootstrap admin theme" scheme="http://vadimg.com/tags/bootstrap-admin-theme/"/>
+    
+      <category term="bootstrap 3" scheme="http://vadimg.com/tags/bootstrap-3/"/>
     
   </entry>
   
@@ -1421,9 +1421,9 @@
     
       <category term="bootstrap" scheme="http://vadimg.com/tags/bootstrap/"/>
     
-      <category term="admin" scheme="http://vadimg.com/tags/admin/"/>
-    
       <category term="theme" scheme="http://vadimg.com/tags/theme/"/>
+    
+      <category term="admin" scheme="http://vadimg.com/tags/admin/"/>
     
       <category term="free" scheme="http://vadimg.com/tags/free/"/>
     
@@ -1563,8 +1563,6 @@
       <category term="javascript" scheme="http://vadimg.com/categories/Backbone-js/bootstrap/bug-tracker/javascript/"/>
     
     
-      <category term="PHP" scheme="http://vadimg.com/tags/PHP/"/>
-    
       <category term="backbone" scheme="http://vadimg.com/tags/backbone/"/>
     
       <category term="backbone.js" scheme="http://vadimg.com/tags/backbone-js/"/>
@@ -1572,6 +1570,8 @@
       <category term="javascript" scheme="http://vadimg.com/tags/javascript/"/>
     
       <category term="js" scheme="http://vadimg.com/tags/js/"/>
+    
+      <category term="PHP" scheme="http://vadimg.com/tags/PHP/"/>
     
       <category term="backbone js" scheme="http://vadimg.com/tags/backbone-js/"/>
     
@@ -1778,6 +1778,12 @@ $(document).ready(function() {
     
       <category term="bootstrap" scheme="http://vadimg.com/tags/bootstrap/"/>
     
+      <category term="free template" scheme="http://vadimg.com/tags/free-template/"/>
+    
+      <category term="free theme" scheme="http://vadimg.com/tags/free-theme/"/>
+    
+      <category term="theme" scheme="http://vadimg.com/tags/theme/"/>
+    
       <category term="admin" scheme="http://vadimg.com/tags/admin/"/>
     
       <category term="admin template" scheme="http://vadimg.com/tags/admin-template/"/>
@@ -1788,13 +1794,7 @@ $(document).ready(function() {
     
       <category term="bootstrap theme" scheme="http://vadimg.com/tags/bootstrap-theme/"/>
     
-      <category term="free template" scheme="http://vadimg.com/tags/free-template/"/>
-    
-      <category term="free theme" scheme="http://vadimg.com/tags/free-theme/"/>
-    
       <category term="template" scheme="http://vadimg.com/tags/template/"/>
-    
-      <category term="theme" scheme="http://vadimg.com/tags/theme/"/>
     
   </entry>
   
@@ -2055,6 +2055,14 @@ $(document).ready(function() {
     
       <category term="bootstrap" scheme="http://vadimg.com/tags/bootstrap/"/>
     
+      <category term="free template" scheme="http://vadimg.com/tags/free-template/"/>
+    
+      <category term="free theme" scheme="http://vadimg.com/tags/free-theme/"/>
+    
+      <category term="open source" scheme="http://vadimg.com/tags/open-source/"/>
+    
+      <category term="theme" scheme="http://vadimg.com/tags/theme/"/>
+    
       <category term="admin" scheme="http://vadimg.com/tags/admin/"/>
     
       <category term="admin template" scheme="http://vadimg.com/tags/admin-template/"/>
@@ -2063,19 +2071,11 @@ $(document).ready(function() {
     
       <category term="bootstrap theme" scheme="http://vadimg.com/tags/bootstrap-theme/"/>
     
-      <category term="free template" scheme="http://vadimg.com/tags/free-template/"/>
-    
-      <category term="free theme" scheme="http://vadimg.com/tags/free-theme/"/>
-    
-      <category term="theme" scheme="http://vadimg.com/tags/theme/"/>
-    
-      <category term="open source" scheme="http://vadimg.com/tags/open-source/"/>
-    
-      <category term="bootstrap admin theme" scheme="http://vadimg.com/tags/bootstrap-admin-theme/"/>
-    
       <category term="free" scheme="http://vadimg.com/tags/free/"/>
     
       <category term="bootstrap admin" scheme="http://vadimg.com/tags/bootstrap-admin/"/>
+    
+      <category term="bootstrap admin theme" scheme="http://vadimg.com/tags/bootstrap-admin-theme/"/>
     
       <category term="twitter" scheme="http://vadimg.com/tags/twitter/"/>
     
@@ -2132,6 +2132,8 @@ $(document).ready(function() {
     
       <category term="bootstrap" scheme="http://vadimg.com/tags/bootstrap/"/>
     
+      <category term="theme" scheme="http://vadimg.com/tags/theme/"/>
+    
       <category term="admin" scheme="http://vadimg.com/tags/admin/"/>
     
       <category term="admin template" scheme="http://vadimg.com/tags/admin-template/"/>
@@ -2142,13 +2144,11 @@ $(document).ready(function() {
     
       <category term="template" scheme="http://vadimg.com/tags/template/"/>
     
-      <category term="theme" scheme="http://vadimg.com/tags/theme/"/>
-    
-      <category term="bootstrap admin theme" scheme="http://vadimg.com/tags/bootstrap-admin-theme/"/>
-    
       <category term="bootstrap admin" scheme="http://vadimg.com/tags/bootstrap-admin/"/>
     
       <category term="bootstrap admin template" scheme="http://vadimg.com/tags/bootstrap-admin-template/"/>
+    
+      <category term="bootstrap admin theme" scheme="http://vadimg.com/tags/bootstrap-admin-theme/"/>
     
   </entry>
   

@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"
   />
   <meta name="description" content="אני מניח שזה ידוע שעברתי בחינת הסמכה של Zend ב PHP 5 בינואר האחרון. היום נגשתי לבחינה   של Zend Framework וכן נחשתם נכון, עברתי גם אותה. כמו תמיד וכמו שכולם אומרים “די   הופתעתי” לעבור, מהסיבה הפשוטה">
-  <meta name="keywords" content="framework,certified,zend,engineer,zend framework">
+  <meta name="keywords" content="framework,certified,zend,zend framework,engineer">
   <meta property="og:type" content="article">
   <meta property="og:title" content="Zend Certified? עכשיו גם Zend Framework Certified Engineer">
   <meta property="og:url" content="http://vadimg.com/2009/04/Zend Certified">
@@ -246,7 +246,7 @@
               </div>
 
               <a data-url="http://vadimg.com/2009/04/Zend Certified? עכשיו גם Zend Framework Certified Engineer/"
-                                                                                              data-id="cj3tkpys800kh1aygk4i23jjo" class="article-share-link">
+                                                                                              data-id="cj3tl8uoc01hwcnyggideunob" class="article-share-link">
                 <i class="fa fa-share"></i>Share</a>
               <script>
                 (function($) {
