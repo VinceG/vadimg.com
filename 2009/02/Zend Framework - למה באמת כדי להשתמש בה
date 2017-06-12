@@ -14,7 +14,7 @@
   <meta property="og:url" content="http://vadimg.com/2009/02/Zend Framework - למה באמת כדי להשתמש בה">
   <meta property="og:site_name" content="Vincent Gabriel">
   <meta property="og:description" content="בדרך כלל אני לא בעד כל ה frameworks למיניהם. במיוחד אחרי כל הקטע של “הדימוי” שלהם   לכיוון והדרך בה   Ruby on Rails כתוב, כל PHP Framework כיום כותב בעצמו איזה   ActiveRecord או   scaffolding ודברים א">
-  <meta property="og:updated_time" content="2017-06-12T01:21:28.000Z">
+  <meta property="og:updated_time" content="2017-06-12T05:31:14.000Z">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Zend Framework - למה באמת כדי להשתמש בה?">
   <meta name="twitter:description" content="בדרך כלל אני לא בעד כל ה frameworks למיניהם. במיוחד אחרי כל הקטע של “הדימוי” שלהם   לכיוון והדרך בה   Ruby on Rails כתוב, כל PHP Framework כיום כותב בעצמו איזה   ActiveRecord או   scaffolding ודברים א">
@@ -280,8 +280,7 @@
                   <li>צוות אמין ,מקצועי וגדול של מפתחים שעומדים מאחורי הפיתוח שלה.</li>
                   <br>
                   <li>הרבה
-                    <a href="http://www.vadimg.co.il/wp-content/uploads/2009/02/zend_components.jpg"
-                                                                                                    target="_blank">מחלקות</a> שנכתבו כבר ומוכנות לשימוש קל פשוט ויעיל שמשתמשות בכל
+                    <a href="/assets/2009/02/zend_components.jpg" target="_blank">מחלקות</a> שנכתבו כבר ומוכנות לשימוש קל פשוט ויעיל שמשתמשות בכל
                     ה design patterns למיניהם.
                   </li>
                   <br>
@@ -320,7 +319,7 @@
               </div>
 
               <a data-url="http://vadimg.com/2009/02/Zend Framework - למה באמת כדי להשתמש בה?/"
-                                                                                              data-id="cj3tl8uof01hzcnygny3ck0kd" class="article-share-link">
+                                                                                              data-id="cj3tohy170067vsyg7nemsc95" class="article-share-link">
                 <i class="fa fa-share"></i>Share</a>
               <script>
                 (function($) {

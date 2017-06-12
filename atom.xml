@@ -873,6 +873,8 @@
     
       <category term="framework" scheme="http://vadimg.com/tags/framework/"/>
     
+      <category term="social" scheme="http://vadimg.com/tags/social/"/>
+    
       <category term="ajax" scheme="http://vadimg.com/tags/ajax/"/>
     
       <category term="enterprise" scheme="http://vadimg.com/tags/enterprise/"/>
@@ -880,8 +882,6 @@
       <category term="rebuild" scheme="http://vadimg.com/tags/rebuild/"/>
     
       <category term="redesign" scheme="http://vadimg.com/tags/redesign/"/>
-    
-      <category term="social" scheme="http://vadimg.com/tags/social/"/>
     
   </entry>
   
@@ -2073,13 +2073,13 @@ $(document).ready(function() {
     
       <category term="free" scheme="http://vadimg.com/tags/free/"/>
     
-      <category term="bootstrap admin" scheme="http://vadimg.com/tags/bootstrap-admin/"/>
-    
-      <category term="bootstrap admin theme" scheme="http://vadimg.com/tags/bootstrap-admin-theme/"/>
-    
       <category term="twitter" scheme="http://vadimg.com/tags/twitter/"/>
     
       <category term="twitter bootstrap" scheme="http://vadimg.com/tags/twitter-bootstrap/"/>
+    
+      <category term="bootstrap admin" scheme="http://vadimg.com/tags/bootstrap-admin/"/>
+    
+      <category term="bootstrap admin theme" scheme="http://vadimg.com/tags/bootstrap-admin-theme/"/>
     
       <category term="free admin" scheme="http://vadimg.com/tags/free-admin/"/>
     

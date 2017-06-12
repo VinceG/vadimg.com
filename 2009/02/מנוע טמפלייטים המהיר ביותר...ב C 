@@ -8,18 +8,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"
   />
   <meta name="description" content="אני בטוח שכל אחד מנסה למצוא כל מיני דרכים לנסות ולראות מה תיהיה השיטה הטובה ביותר   לתכנת ב PHP , לכתוב XHTML, להפריד בין השניים ועדיין לגרום למערכת להיות מספיק מהירה   כדי לעבוד על פרוייקטים גודלים י">
-  <meta name="keywords" content="engine,template engine,templates,טמפלייטס,מנוע">
+  <meta name="keywords" content="engine,template engine,מנוע,templates,טמפלייטס">
   <meta property="og:type" content="article">
   <meta property="og:title" content="מנוע טמפלייטים המהיר ביותר...ב C ??">
   <meta property="og:url" content="http://vadimg.com/2009/02/מנוע טמפלייטים המהיר ביותר...ב C ">
   <meta property="og:site_name" content="Vincent Gabriel">
   <meta property="og:description" content="אני בטוח שכל אחד מנסה למצוא כל מיני דרכים לנסות ולראות מה תיהיה השיטה הטובה ביותר   לתכנת ב PHP , לכתוב XHTML, להפריד בין השניים ועדיין לגרום למערכת להיות מספיק מהירה   כדי לעבוד על פרוייקטים גודלים י">
-  <meta property="og:image" content="http://www.vadimg.co.il/wp-content/uploads/2009/02/lebowski-bench-big.gif">
-  <meta property="og:updated_time" content="2017-06-12T01:21:28.000Z">
+  <meta property="og:image" content="http://vadimg.com/assets/2009/02/lebowski-bench-big.gif">
+  <meta property="og:updated_time" content="2017-06-12T05:28:32.000Z">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="מנוע טמפלייטים המהיר ביותר...ב C ??">
   <meta name="twitter:description" content="אני בטוח שכל אחד מנסה למצוא כל מיני דרכים לנסות ולראות מה תיהיה השיטה הטובה ביותר   לתכנת ב PHP , לכתוב XHTML, להפריד בין השניים ועדיין לגרום למערכת להיות מספיק מהירה   כדי לעבוד על פרוייקטים גודלים י">
-  <meta name="twitter:image" content="http://www.vadimg.co.il/wp-content/uploads/2009/02/lebowski-bench-big.gif">
+  <meta name="twitter:image" content="http://vadimg.com/assets/2009/02/lebowski-bench-big.gif">
 
   <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
   <link rel="stylesheet" href="/libs/open-sans/styles.css">
@@ -250,7 +250,7 @@
                 ולא תמיד אפשר להסתמך עליהם. דוגמא לנתונים מאתר Blitz לגבי מהירות
                 המנוע שלהם:</p>
               <p>
-                <img class="aligncenter size-full wp-image-178" title="Benchmark" src="http://www.vadimg.co.il/wp-content/uploads/2009/02/lebowski-bench-big.gif"
+                <img class="aligncenter size-full wp-image-178" title="Benchmark" src="/assets/2009/02/lebowski-bench-big.gif"
                                                                                                 alt="Benchmark" width="802" height="597">כפי שניתן לראות זה “נראה” אכן מהיר יותר מהשאר אך שוב החסרון שזה תוסף
                 ולא משהו מובנה עושה את שלו. בכל מקרה אני אישית עבדתי עם מנועים שונים
                 (ואת האמת כתבתי אחד בעצמי שעדיין עובד עליו) אבל זה באמת עניין של
@@ -303,7 +303,7 @@
 
               </div>
 
-              <a data-url="http://vadimg.com/2009/02/מנוע טמפלייטים המהיר ביותר...ב C ??/" data-id="cj3tl8uhw01cncnygwrwva7cp"
+              <a data-url="http://vadimg.com/2009/02/מנוע טמפלייטים המהיר ביותר...ב C ??/" data-id="cj3tohy2t0095vsygkw95wbvz"
                                                                                               class="article-share-link">
                 <i class="fa fa-share"></i>Share</a>
               <script>

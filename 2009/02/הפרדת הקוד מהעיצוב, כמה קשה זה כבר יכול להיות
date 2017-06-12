@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"
   />
   <meta name="description" content="הרבה שאלות נשאלות בנוגע ל MVC (קיצור של Model-View-Controller) שמשמש בעצם הפרדה בין   הלוגיקה והתכנות במערכת לבין העיצוב וה HTML. הרבה פניות נשלחו בנוגע לשימוש נכון   ב MVC במערכות אשר נכתבות על ידי ה">
-  <meta name="keywords" content="template,MVC,engine,template engine,מנוע,טמפלייט,מנוע טמפלייט">
+  <meta name="keywords" content="template,MVC,engine,template engine,טמפלייט,מנוע,מנוע טמפלייט">
   <meta property="og:type" content="article">
   <meta property="og:title" content="הפרדת הקוד מהעיצוב, כמה קשה זה כבר יכול להיות?">
   <meta property="og:url" content="http://vadimg.com/2009/02/הפרדת הקוד מהעיצוב, כמה קשה זה כבר יכול להיות">
@@ -332,7 +332,7 @@
               </div>
 
               <a data-url="http://vadimg.com/2009/02/הפרדת הקוד מהעיצוב, כמה קשה זה כבר יכול להיות?/"
-                                                                                              data-id="cj3tl8uqw01jwcnygv4oxnzk4" class="article-share-link">
+                                                                                              data-id="cj3tohy27007xvsygdaw2ujde" class="article-share-link">
                 <i class="fa fa-share"></i>Share</a>
               <script>
                 (function($) {
